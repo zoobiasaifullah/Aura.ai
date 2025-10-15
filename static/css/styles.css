@@ -1786,17 +1786,17 @@ section.dark-context .btn-outline:hover,
     max-height: 0;
     overflow: hidden;
     transition: max-height var(--transition-slowest), padding var(--transition-slowest), opacity var(--transition-slow);
-    opacity: 0
+    opacity: 0;
     }
 .card-faq.active .faq-answer, .accordion-item.active .accordion-content, .faq-answer.active {
     max-height: 3000px;
     padding: 0 var(--space-2xl) var(--space-2xl) var(--space-2xl);
     padding-top: var(--space-xl);
-    opacity: 1
+    opacity: 1;
     }
 .faq-answer-content, .accordion-content-inner {
     color: #4A5568;
-    line-height: var(--line-height-loose)
+    line-height: var(--line-height-loose);
     }
 /* Content inside accordion */
 .faq-answer p, .accordion-content p {

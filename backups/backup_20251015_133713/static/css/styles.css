@@ -1621,7 +1621,7 @@ section.dark-context .btn-outline:hover,
 /* ====================== 9. FAQ / ACCORDION COMPONENTS ====================== */
 /* FAQ Container */
 .faq-container, .faq-section {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto
     }
 /* FAQ Category Sections */
@@ -1786,22 +1786,23 @@ section.dark-context .btn-outline:hover,
     max-height: 0;
     overflow: hidden;
     transition: max-height var(--transition-slowest), padding var(--transition-slowest), opacity var(--transition-slow);
-    opacity: 0
+    opacity: 0;
     }
 .card-faq.active .faq-answer, .accordion-item.active .accordion-content, .faq-answer.active {
     max-height: 3000px;
     padding: 0 var(--space-2xl) var(--space-2xl) var(--space-2xl);
     padding-top: var(--space-xl);
-    opacity: 1
+    opacity: 1;
     }
 .faq-answer-content, .accordion-content-inner {
-    color: var(--gray-700);
-    line-height: var(--line-height-loose)
+    color: #4A5568;
+    line-height: var(--line-height-loose);
     }
 /* Content inside accordion */
 .faq-answer p, .accordion-content p {
     margin-bottom: var(--space-lg);
-    line-height: var(--line-height-loose)
+    line-height: var(--line-height-loose);
+    color: #4A5568;
     }
 .faq-answer p:last-child, .accordion-content p:last-child {
     margin-bottom: 0
@@ -2688,8 +2689,8 @@ section.dark-context .btn-outline:hover,
     background: linear-gradient(180deg, #FFF9FB 0%, #F8F4FB 100%);
     }
 .faq-container {
-    max-width: 100%;
-    margin: 0;
+    max-width: 1200px;
+    margin: 0 auto;
     }
 .faq-item {
     margin-bottom: var(--space-md);
@@ -2765,7 +2766,7 @@ section.dark-context .btn-outline:hover,
 .faq-answer p {
     padding: 0 1.25rem 1.25rem 1.25rem;
     margin: 0;
-    color: var(--gray-700);
+    color: #4A5568;
     line-height: 1.6;
     font-size: 0.9375rem;
     }
