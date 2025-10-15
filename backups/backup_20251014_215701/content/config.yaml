@@ -1,0 +1,58 @@
+# Site Configuration
+# Edit this file to update global site settings
+
+site:
+  title: "Aura"
+  tagline: "AI-Powered Skincare, Simplified"
+  description: "Get your personalized minimalist skincare routine in minutes. AI-powered skin analysis through selfies + smart quiz = 2-3 essential products from our curated, ingredient-transparent catalog."
+  url: "https://aura.ai"
+  author: "Aura Skincare"
+  language: "en"
+  
+  # Contact Information
+  phone: "+1 (555) 123-4567"
+  phone_raw: "+15551234567"
+  email: "hello@aura.ai"
+  whatsapp: "15551234567"
+  
+  # Location
+  location:
+    city: "Online"
+    region: "Worldwide"
+    coordinates:
+      latitude: 0
+      longitude: 0
+  
+  # Social Media (set real URLs or leave empty to hide)
+  social:
+    facebook: ""
+    instagram: ""
+    linkedin: ""
+    twitter: ""
+  
+  # SEO Keywords
+  keywords:
+    - "AI skincare analysis"
+    - "personalized skincare routine"
+    - "minimalist skincare"
+    - "skin analysis app"
+    - "ingredient transparency"
+    - "selfie skin diagnosis"
+    - "personalized beauty"
+    - "curated skincare products"
+    - "science-based skincare"
+    - "dermatology AI"
+
+# Build Configuration
+build:
+  output_dir: "docs"
+  static_dir: "static"
+  template_dir: "templates"
+  
+# Feature Flags
+features:
+  show_blog: false
+  show_testimonials: true
+  show_whatsapp_float: true
+  show_pricing: true
+  enable_analytics: false
