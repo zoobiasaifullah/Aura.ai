@@ -2,32 +2,32 @@
 # Edit this file to add/update customer testimonials
 
 testimonials:
-  - id: michael-r
-    name: "Michael R."
-    location: "Florida → San Juan"
+  - id: sarah-m
+    name: "Sarah M."
+    location: "Los Angeles, CA"
     rating: 5
     avatar_icon: "fa-user"
     order: 1
     quote: |
-      Finally found someone I can trust with my property in San Juan! The detailed 
-      photo reports give me complete peace of mind while I'm in Florida.
+      Finally, a skincare routine that actually works! Aura's AI nailed my skin type 
+      and the 3 products recommended have completely transformed my complexion. No more wasting money on products that don't work.
     
-  - id: jennifer-l
-    name: "Jennifer L."
-    location: "Texas → Dorado"
+  - id: james-t
+    name: "James T."
+    location: "Austin, TX"
     rating: 5
     avatar_icon: "fa-user"
     order: 2
     quote: |
-      The translation service saved me thousands! I couldn't have navigated the 
-      permit process without the bilingual help and local knowledge.
+      As a guy who knew nothing about skincare, Aura made it so simple. The quiz was 
+      quick, the analysis was spot-on, and now I have clear skin for the first time in years. Game changer!
     
-  - id: david-k
-    name: "David K."
-    location: "New York → Carolina"
+  - id: priya-k
+    name: "Priya K."
+    location: "New York, NY"
     rating: 5
     avatar_icon: "fa-user"
     order: 3
     quote: |
-      Professional, reliable, and truly cares about my property. The WhatsApp 
-      updates with photos after each visit are incredibly helpful.
+      I love how transparent everything is. Seeing all the ingredients and knowing 
+      exactly what I'm putting on my face gives me so much confidence. Plus, only 2 products? My routine has never been easier!

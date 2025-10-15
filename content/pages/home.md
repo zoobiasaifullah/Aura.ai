@@ -1,23 +1,23 @@
 ---
-title: "Property Management Puerto Rico | Legs on the Ground"
-description: "Professional property management in Puerto Rico. Bilingual service, property check-ins, translation. Trusted by mainland owners. From $100."
+title: "Aura | AI-Powered Personalized Skincare Routine"
+description: "Get your personalized minimalist skincare routine in minutes. AI-powered skin analysis through selfies + smart quiz = 2-3 essential products tailored to you."
 layout: "home"
 page_id: "home"
 
 # Hero Section
 hero:
-  title: "Your Trusted Eyes, Ears & Legs in Puerto Rico"
-  subtitle: "Professional bilingual property concierge services for mainland owners. Peace of mind for your Puerto Rico investment, starting at just $100 per visit."
+  title: "Your Skin, Simplified by Science"
+  subtitle: "AI-powered skin analysis meets personalized care. Take a selfie, answer a few questions, and get a minimalist routine with 2–3 essential products from our curated, ingredient-transparent catalog."
   image: "images/hero/hero-main.jpg"
-  image_alt: "Luxury beachfront property in Puerto Rico at golden hour sunset, showcasing professional property management services"
+  image_alt: "Woman analyzing her skin with Aura's AI-powered skincare app on her phone"
   cta_primary:
-    text: "Book Property Visit"
+    text: "Start Your Skin Analysis"
     url: "#contact"
-    icon: "fa-calendar-check"
+    icon: "fa-sparkles"
   cta_secondary:
-    text: "View Services"
+    text: "See How It Works"
     url: "#services"
-    icon: "fa-info-circle"
+    icon: "fa-play-circle"
 
 # Sections to Show
 sections:
@@ -29,41 +29,41 @@ sections:
 
 # Services Section
 services:
-  title: "Professional Property Services in Puerto Rico"
+  title: "Your Path to Perfect Skin in 3 Simple Steps"
   custom_cta:
     show: true
-    title: "Need a custom package?"
-    description: "We offer flexible monthly packages starting at $350/month"
-    button_text: "View All Packages"
+    title: "Ready for healthier skin?"
+    description: "Join thousands who've simplified their skincare with Aura"
+    button_text: "Get Started Free"
     button_url: "services.html"
 
 # CTA Section
 cta:
-  title: "Ready to Protect Your Puerto Rico Investment?"
-  description: "Book your first property visit today and experience the peace of mind you deserve"
+  title: "Ready to Transform Your Skincare Routine?"
+  description: "Start your free skin analysis today and discover the products your skin actually needs"
   background_image: "images/hero/hero-main.jpg"
   buttons:
-    - text: "Schedule Visit Now"
+    - text: "Analyze My Skin Now"
       url: "#contact"
-      icon: "fa-calendar-check"
+      icon: "fa-sparkles"
       style: "primary"
-    - text: "Call Us Today"
-      url: "tel:+17875551234"
-      icon: "fa-phone"
+    - text: "Learn More"
+      url: "#services"
+      icon: "fa-info-circle"
       style: "white"
   guarantee:
-    icon: "fa-shield-alt"
-    text: "100% Satisfaction Guaranteed • No Long-term Contracts Required"
+    icon: "fa-shield-check"
+    text: "100% Ingredient Transparency • Science-Backed Recommendations • Free Analysis"
 
 # SEO
 seo:
   canonical: "/"
   og_type: "website"
-  og_image: "https://legsontheground.com/images/social/og-image.jpg"
+  og_image: "https://aura.ai/images/social/og-image.jpg"
   twitter_card: "summary_large_image"
-  twitter_image: "https://legsontheground.com/images/social/twitter-card.jpg"
+  twitter_image: "https://aura.ai/images/social/twitter-card.jpg"
 ---
 
-# Your Trusted Property Partner in Puerto Rico
+# AI-Powered Skincare That Actually Works
 
-Welcome to Legs on the Ground - your reliable property concierge service in Puerto Rico. We provide peace of mind for mainland property owners with professional, bilingual support you can trust.
+Welcome to Aura - your personalized skincare solution powered by artificial intelligence. We analyze your skin through selfies and a smart quiz, then create a minimalist routine with only the essentials your skin truly needs.

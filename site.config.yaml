@@ -1,14 +1,14 @@
 # site.config.yaml
-# Central configuration for Legs on the Ground website
+# Central configuration for Aura AI Skincare website
 
 project:
-  name: "Legs on the Ground"
+  name: "Aura AI Skincare"
   version: "1.0.0"
-  description: "Property concierge services website"
+  description: "AI-powered personalized skincare routine builder"
   
 site:
   url: "https://kaw393939.github.io/legsontheground.com/"
-  title: "Legs on the Ground - Property Concierge Services"
+  title: "Aura - AI-Powered Personalized Skincare"
   language: "en"
   
 build:

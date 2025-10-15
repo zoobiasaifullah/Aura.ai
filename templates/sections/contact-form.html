@@ -1,8 +1,8 @@
 <section class="contact-form-section" id="contact-form">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
+            <h2 class="section-title">Start Your Skin Analysis</h2>
+            <p class="section-subtitle">Get your personalized skincare routine in minutes—completely free</p>
         </div>
         
         <div class="contact-form-wrapper">
@@ -16,7 +16,7 @@
                             id="name" 
                             name="name" 
                             required 
-                            placeholder="John Smith"
+                            placeholder="Sarah Johnson"
                             aria-required="true">
                     </div>
                     
@@ -27,57 +27,55 @@
                             id="email" 
                             name="email" 
                             required 
-                            placeholder="john@example.com"
+                            placeholder="sarah@example.com"
                             aria-required="true">
                     </div>
                 </div>
                 
                 <div class="form-row grid">
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
+                        <label for="phone">Phone Number (Optional)</label>
                         <input 
                             type="tel" 
                             id="phone" 
                             name="phone" 
-                            placeholder="(787) 555-1234">
+                            placeholder="(555) 123-4567">
                     </div>
                     
                     <div class="form-group">
-                        <label for="property-location">Property Location</label>
+                        <label for="skin-type">Primary Skin Concern</label>
                         <input 
                             type="text" 
-                            id="property-location" 
-                            name="property_location" 
-                            placeholder="San Juan, Puerto Rico">
+                            id="skin-type" 
+                            name="skin_concern" 
+                            placeholder="e.g., Acne, Dryness, Aging">
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label for="service">Service Interested In</label>
+                    <label for="service">What Are You Looking For?</label>
                     <select id="service" name="service">
-                        <option value="">Select a service...</option>
-                        <option value="property-visits">Property Check-Ins</option>
-                        <option value="translation">Translation Services</option>
-                        <option value="transportation">Transportation & Airport Assistance</option>
-                        <option value="coordination">Property Coordination</option>
-                        <option value="other">Other / Multiple Services</option>
+                        <option value="">Select an option...</option>
+                        <option value="full-analysis">Complete Skin Analysis + Routine</option>
+                        <option value="skin-concerns">Help With Specific Skin Concerns</option>
+                        <option value="routine-simplify">Simplify My Current Routine</option>
+                        <option value="product-recommendations">Product Recommendations Only</option>
+                        <option value="other">Other / Just Exploring</option>
                     </select>
                 </div>
                 
                 <div class="form-group">
-                    <label for="message">Message <span class="required">*</span></label>
+                    <label for="message">Tell Us About Your Skin (Optional)</label>
                     <textarea 
                         id="message" 
                         name="message" 
                         rows="5" 
-                        required 
-                        placeholder="Tell us about your property and what you need help with..."
-                        aria-required="true"></textarea>
+                        placeholder="Share any skin concerns, allergies, or products you've tried before..."></textarea>
                 </div>
                 
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-lg">
-                        <i class="fas fa-paper-plane"></i> Send Message
+                        <i class="fas fa-sparkles"></i> Get My Free Analysis
                     </button>
                 </div>
                 
@@ -85,14 +83,7 @@
             </form>
             
             <div class="contact-info-sidebar">
-                <h3>Direct Contact</h3>
-                <div class="contact-info-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <strong>Call Us</strong>
-                        <a href="tel:{{ site.phone_raw }}">{{ site.phone }}</a>
-                    </div>
-                </div>
+                <h3>Quick Support</h3>
                 <div class="contact-info-item">
                     <i class="fas fa-envelope"></i>
                     <div>
@@ -101,23 +92,23 @@
                     </div>
                 </div>
                 <div class="contact-info-item">
-                    <i class="fab fa-whatsapp"></i>
+                    <i class="fas fa-comments"></i>
                     <div>
-                        <strong>WhatsApp</strong>
-                        <a href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener">Chat with us</a>
+                        <strong>Live Chat</strong>
+                        <a href="#" target="_blank" rel="noopener">Chat with support</a>
                     </div>
                 </div>
                 <div class="contact-info-item">
-                    <i class="fas fa-map-marker-alt"></i>
+                    <i class="fas fa-mobile-alt"></i>
                     <div>
-                        <strong>Location</strong>
-                        <p>{{ site.location.city }}, {{ site.location.region }}</p>
+                        <strong>Download App</strong>
+                        <p>Coming soon to iOS & Android</p>
                     </div>
                 </div>
                 
                 <div class="response-time flex items-center">
-                    <i class="fas fa-clock"></i>
-                    <p><strong>Response Time:</strong> Within 24 hours</p>
+                    <i class="fas fa-bolt"></i>
+                    <p><strong>Get Results:</strong> Instant AI analysis</p>
                 </div>
             </div>
         </div>

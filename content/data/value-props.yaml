@@ -2,23 +2,23 @@
 # Edit this file to update key benefits shown on homepage
 
 value_props:
-  - id: pricing
-    title: "Simple, Affordable Pricing"
-    icon: "fa-hand-holding-usd"
+  - id: simplicity
+    title: "Minimalist & Simple"
+    icon: "fa-leaf"
     order: 1
     description: |
-      Starting at $100 per visit. No hidden fees. Pay only for what you need.
+      Just 2–3 essential products. No overwhelming 10-step routines. Your skin gets what it needs, nothing more.
   
-  - id: personal-service
-    title: "Personal Service"
-    icon: "fa-user-check"
+  - id: transparency
+    title: "100% Ingredient Transparency"
+    icon: "fa-search"
     order: 2
     description: |
-      Direct communication with someone who cares. Not a call center.
+      See every ingredient. Know what you're putting on your skin. No hidden chemicals or unclear labels.
   
-  - id: instant-updates
-    title: "Instant Updates"
-    icon: "fa-mobile-alt"
+  - id: ai-powered
+    title: "AI-Powered Precision"
+    icon: "fa-brain"
     order: 3
     description: |
-      Photos, videos, and detailed reports after every visit via WhatsApp or email.
+      Advanced dermatology-backed algorithms analyze your unique skin for personalized, science-based recommendations.

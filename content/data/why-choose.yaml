@@ -2,35 +2,35 @@
 # Edit this file to update the reasons customers trust you
 
 why_choose:
-  section_title: "Why Mainland Owners Trust Us"
+  section_title: "Why Choose Aura for Your Skincare"
   
   reasons:
-    - id: bilingual
-      title: "Truly Bilingual Service"
-      icon: "fa-language"
+    - id: science-backed
+      title: "Dermatology-Backed AI"
+      icon: "fa-microscope"
       image: "images/about/about-bilingual.jpg"
-      image_alt: "Bilingual professional fluent in English and Spanish for seamless communication"
+      image_alt: "Advanced AI technology backed by dermatology research and science"
       order: 1
       description: |
-        Fluent in English and Spanish. Seamlessly communicate with local contractors, 
-        government officials, and service providers. No more communication barriers.
+        Our AI is trained on thousands of dermatology cases and validated by skincare 
+        experts. Get recommendations you can trust, backed by real science—not marketing hype.
     
-    - id: local-knowledge
-      title: "Deep Local Knowledge"
-      icon: "fa-map-marked-alt"
+    - id: curated-catalog
+      title: "Carefully Curated Products"
+      icon: "fa-check-circle"
       image: "images/about/about-local-knowledge.jpg"
-      image_alt: "Local expert with deep knowledge of Puerto Rico's unique processes and culture"
+      image_alt: "Curated selection of vetted skincare products with transparent ingredients"
       order: 2
       description: |
-        Born and raised in Puerto Rico. We understand the unique processes, cultural 
-        nuances, and the "right way" to get things done on the island.
+        Every product in our catalog is hand-selected and rigorously vetted for quality, 
+        efficacy, and safety. Only the best, most trusted brands with proven ingredients make the cut.
     
-    - id: mainland-understanding
-      title: "Mainland Understanding"
-      icon: "fa-flag-usa"
+    - id: minimalist-approach
+      title: "Less is More Philosophy"
+      icon: "fa-star"
       image: "images/about/about-experience.jpg"
-      image_alt: "Experienced professional with 30+ years understanding mainland US expectations"
+      image_alt: "Minimalist skincare routine with only essential products for healthy skin"
       order: 3
       description: |
-        30+ years of experience working with US mainland clients. We understand your 
-        expectations and translate them into local reality.
+        Your skin doesn't need 10 products. Our minimalist approach focuses on 2–3 
+        essentials that work together perfectly. Save time, save money, see better results.

@@ -7,15 +7,15 @@ main_nav:
     url: "#"
     id: "home"
     
-  - title: "Services"
+  - title: "How It Works"
     url: "#services"
     id: "services"
     
-  - title: "Why Choose Us"
+  - title: "Why Aura"
     url: "#why-choose"
     id: "why-choose"
     
-  - title: "Testimonials"
+  - title: "Reviews"
     url: "#testimonials"
     id: "testimonials"
   
@@ -23,7 +23,7 @@ main_nav:
     url: "#faq"
     id: "faq"
     
-  - title: "Contact"
+  - title: "Get Your Routine"
     url: "#contact"
     id: "contact"
     highlight: true  # Makes this button styled differently
@@ -31,23 +31,23 @@ main_nav:
 # Footer Navigation - Quick links to sections
 footer_nav:
   services:
-    title: "Services"
+    title: "Features"
     links:
-      - title: "Property Check-Ins"
+      - title: "AI Skin Analysis"
         url: "#services"
-      - title: "Translation Services"
+      - title: "Smart Quiz"
         url: "#services"
-      - title: "Transportation"
+      - title: "Personalized Routine"
         url: "#services"
-      - title: "Local Coordination"
+      - title: "Curated Products"
         url: "#services"
   
   company:
     title: "Quick Links"
     links:
-      - title: "Why Choose Us"
+      - title: "Why Aura"
         url: "#why-choose"
-      - title: "Testimonials"
+      - title: "Reviews"
         url: "#testimonials"
       - title: "FAQ"
         url: "#faq"
