@@ -18,7 +18,7 @@ why_choose:
     - id: curated-catalog
       title: "Carefully Curated Products"
       icon: "fa-check-circle"
-      image: "https://images.unsplash.com/photo-1556228852-80f67873a752?w=800&q=80"
+      image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800&q=80"
       image_alt: "Curated selection of vetted skincare products with transparent ingredients"
       order: 2
       description: |
