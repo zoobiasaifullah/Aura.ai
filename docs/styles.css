@@ -1339,27 +1339,27 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     transform: translateY(-1px);
 }
 
-/* Dark Context Buttons - Premium treatment for hero sections */
+/* Hero Button - Better readability on light backgrounds */
 section.dark-context .btn-outline,
 .hero .btn-outline,
 .dark-context .btn-outline {
-    background: rgba(255, 255, 255, 0.08);  /* Subtle bg for better visibility */
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.6);  /* THICKER border - increased from 1.5px */
+    background: rgba(255, 255, 255, 0.95);  /* Solid white background for readability */
+    color: var(--lavender-700);  /* Lavender text instead of white */
+    border: 2px solid var(--lavender-600);  /* Lavender border */
     backdrop-filter: blur(8px);
-    box-shadow: var(--shadow-btn-outline);
-    font-weight: 600;  /* Stronger weight for better balance */
+    box-shadow: 0 2px 8px rgba(167, 139, 250, 0.2);
+    font-weight: 600;
 }
 
 section.dark-context .btn-outline:hover,
 .hero .btn-outline:hover,
 .dark-context .btn-outline:hover {
-    background: rgba(255, 255, 255, 0.95);
-    color: var(--gray-700);
-    border-color: white;
-    border-width: 2px;  /* Maintain thickness on hover */
+    background: var(--lavender-700);
+    color: white;
+    border-color: var(--lavender-700);
+    border-width: 2px;
     transform: translateY(-2px);
-    box-shadow: var(--shadow-btn-outline-hover);
+    box-shadow: 0 4px 12px rgba(167, 139, 250, 0.35);
 }
 /* White Button - Clean & Minimal */
 .btn-white {
@@ -2907,7 +2907,7 @@ section.dark-context .btn-outline:hover,
     align-items: start;
     }
 .footer-section, .footer-col {
-    color: #2D3748
+    color: #262626
     }
 .footer-title {
     font-size: clamp(1.75rem, 4vw, 2.25rem) !important;
@@ -2922,7 +2922,7 @@ section.dark-context .btn-outline:hover,
     line-height: 1.2;
     }
 .footer-description {
-    color: #4A5568;
+    color: #525252;
     line-height: 1.65;
     margin-bottom: var(--space-md);
     font-size: 0.9375rem;
@@ -2930,7 +2930,7 @@ section.dark-context .btn-outline:hover,
 
 /* Footer text - same as description */
 .footer-text {
-    color: #4A5568;
+    color: #525252;
     line-height: 1.65;
     margin-bottom: 1rem;
     font-size: 0.9375rem;
@@ -2940,7 +2940,7 @@ section.dark-context .btn-outline:hover,
     font-size: 1.0625rem;
     font-weight: 600;
     margin-bottom: clamp(0.75rem, 2vh, 1rem);
-    color: #2D3748;
+    color: #262626;
     letter-spacing: -0.01em;
     text-transform: none;
     }
@@ -2951,7 +2951,7 @@ section.dark-context .btn-outline:hover,
     margin-bottom: 0.625rem;
     }
 .footer-links a, .footer-contact a {
-    color: #4A5568;
+    color: #525252;
     transition: var(--transition-fast);
     display: inline-block;
     line-height: 1.6;
@@ -2972,7 +2972,7 @@ section.dark-context .btn-outline:hover,
 .footer-contact a,
 .footer-contact p {
     font-size: 0.9375rem;
-    color: #4A5568;
+    color: #525252;
     font-weight: 400;
     line-height: 1.6;
     display: inline;
