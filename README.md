@@ -1,6 +1,16 @@
-# Legs on the Ground - Property Concierge Services
+# Aura - AI-Powered Personalized Skincare
 
-Professional bilingual property concierge services for mainland owners in Puerto Rico.
+Your skin, simplified by science. Get a personalized minimalist skincare routine with 2-3 essential products through AI-powered skin analysis.
+
+## ✨ What is Aura?
+
+Aura is an AI-powered web app that:
+- 📸 **Analyzes your skin** through selfie analysis using advanced AI
+- 📋 **Learns about you** with a simple 2-minute quiz  
+- 💎 **Creates your routine** with 2-3 essential products from our curated catalog
+- 🔬 **Ensures transparency** with complete ingredient visibility for every product
+
+No more overwhelming 10-step routines. No more guessing which products work. Just science-backed, personalized skincare that's simple and effective.
 
 ## 🚀 Quick Start
 
@@ -242,7 +252,7 @@ Build metrics are automatically tracked in `build_metrics.log`:
 
 ## 📞 Support
 
-- **Live Site:** https://kaw393939.github.io/legsontheground.com/
+- **Live Site:** https://zoobiasaifullah.github.io/Aura.ai/
 - **Build System:** Python 3.12 + Jinja2
 - **Deployment:** GitHub Pages (automatic)
 
