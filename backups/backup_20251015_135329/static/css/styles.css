@@ -1786,17 +1786,17 @@ section.dark-context .btn-outline:hover,
     max-height: 0;
     overflow: hidden;
     transition: max-height var(--transition-slowest), padding var(--transition-slowest), opacity var(--transition-slow);
-    opacity: 0
+    opacity: 0;
     }
-.card-faq.active .faq-answer, .accordion-item.active .accordion-content, .faq-answer.active {
+.card-faq.active .faq-answer, .accordion-item.active .accordion-content, .faq-item.active .faq-answer {
     max-height: 3000px;
     padding: 0 var(--space-2xl) var(--space-2xl) var(--space-2xl);
     padding-top: var(--space-xl);
-    opacity: 1
+    opacity: 1;
     }
 .faq-answer-content, .accordion-content-inner {
     color: #4A5568;
-    line-height: var(--line-height-loose)
+    line-height: var(--line-height-loose);
     }
 /* Content inside accordion */
 .faq-answer p, .accordion-content p {
@@ -2762,16 +2762,25 @@ section.dark-context .btn-outline:hover,
     overflow: hidden;
     transition: max-height var(--transition-smooth);
     background: var(--white);
+    padding: 0;
     }
 .faq-answer p {
-    padding: 0 1.25rem 1.25rem 1.25rem;
-    margin: 0;
+    padding: 0 2rem;
+    margin: 0 0 1rem 0;
     color: #4A5568;
-    line-height: 1.6;
-    font-size: 0.9375rem;
+    line-height: 1.7;
+    font-size: 1rem;
+    }
+.faq-answer p:first-child {
+    padding-top: 1.5rem;
+    }
+.faq-answer p:last-child {
+    padding-bottom: 1.5rem;
+    margin-bottom: 0;
     }
 .faq-item.active .faq-answer {
-    max-height: 800px;
+    max-height: 3000px !important;
+    opacity: 1 !important;
     }
 /* Contact Form Section */
 .contact-form-section {
