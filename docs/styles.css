@@ -740,14 +740,8 @@ body {
     font-weight: var(--font-weight-normal);
     line-height: var(--line-height-loose);
     color: var(--gray-700);
-    background: linear-gradient(180deg, 
-        #F8F4FB 0%,
-        #FFF9FB 20%,
-        #FFFDF8 40%,
-        #FFFFFF 50%,
-        #FFFDF8 60%,
-        #FFF9FB 80%,
-        #F8F4FB 100%);
+    background: linear-gradient(180deg, #FFF9FB 0%, #F8F4FB 100%);
+    background-attachment: fixed;
     background-attachment: fixed;
     overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
@@ -1014,25 +1008,26 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     max-width: 65ch
     }
 .section-title {
-    font-size: var(--font-size-4xl);
-    font-weight: var(--font-weight-extrabold);
-    color: var(--gray-700);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 600;
+    color: #2D3748;
     margin-top: 0;
-    margin-bottom: var(--space-xl);
-    line-height: var(--line-height-tight);
-    letter-spacing: -0.025em
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
     }
 .section-title.text-center {
-    margin-bottom: var(--space-lg)
+    margin-bottom: 1.25rem;
     }
 .section-description, .section-subtitle {
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-normal);
-    color: var(--gray-600);
-    max-width: 60ch;
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    font-weight: 400;
+    color: #4A5568;
+    max-width: 65ch;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
+    line-height: 1.7;
     margin-bottom: var(--space-3xl);
     line-height: var(--line-height-loose)
     }
@@ -1092,19 +1087,21 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     }
 /* Main Header */
 .header {
-    background: var(--white);
-    box-shadow: var(--shadow-sm);
+    background: linear-gradient(180deg, #FFFFFF 0%, #FDFBFF 100%);
+    box-shadow: 0 1px 3px rgba(167, 139, 250, 0.08), 0 1px 2px rgba(167, 139, 250, 0.06);
     position: sticky;
     top: 0;
     z-index: var(--z-sticky);
-    transition: var(--transition-base)
+    transition: var(--transition-base);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(167, 139, 250, 0.08);
     }
 .header.scrolled {
-    box-shadow: var(--shadow-md)
+    box-shadow: 0 4px 6px rgba(167, 139, 250, 0.12), 0 2px 4px rgba(167, 139, 250, 0.08);
     }
 .header-content {
-    padding: 0.5rem 0;
-    min-height: 50px;
+    padding: 1rem 0;
+    min-height: 64px;
     gap: var(--space-md)
     }
 .logo {
@@ -1118,52 +1115,55 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     gap: 0.5rem
     }
 .logo-name {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--gray-700);
+    font-size: clamp(1.375rem, 2.5vw, 1.625rem);
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--lavender-600) 0%, var(--lavender-700) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     letter-spacing: -0.02em;
     line-height: 1;
     white-space: nowrap
     }
 /* Navigation */
 .nav {
-    gap: var(--space-2xl);
+    gap: clamp(1.75rem, 3vw, 2.5rem);
     margin-left: auto
     }
 .nav-link {
-    color: var(--gray-700);
-    font-weight: var(--font-weight-semibold);
-    font-size: 1rem;
+    color: #4A5568;
+    font-weight: 500;
+    font-size: clamp(0.9375rem, 1.5vw, 1rem);
     position: relative;
     padding: var(--space-sm) 0;
     padding-bottom: calc(var(--space-sm) + 3px);
     transition: color var(--transition-fast);
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
     }
 
-/* Contact button in nav - Navy version */
+/* Contact button in nav - Lavender gradient version */
 .nav-link.btn.btn-primary {
-    padding: 0.5rem 1.25rem;
+    padding: 0.625rem 1.5rem;
     margin: 0;
     line-height: 1.4;
-    text-shadow: none;
-    background: linear-gradient(135deg, var(--gray-700) 0%, var(--gray-800) 100%);
+    background: linear-gradient(135deg, var(--lavender-600) 0%, var(--lavender-700) 100%);
     color: white;
     border: none;
     font-weight: 600;
+    border-radius: var(--radius-full);
+    box-shadow: 0 2px 8px rgba(167, 139, 250, 0.25);
     transition: all 0.3s ease;
 }
 
 .nav-link.btn.btn-primary:hover {
-    background: linear-gradient(135deg, var(--lavender-600) 0%, var(--lavender-700) 100%);
+    background: linear-gradient(135deg, var(--lavender-700) 0%, var(--lavender-800) 100%);
     color: white;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(167, 139, 250, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(167, 139, 250, 0.35);
 }
 
 .nav-link.btn.btn-primary:active {
     transform: translateY(0);
-    box-shadow: 0 2px 6px rgba(167, 139, 250, 0.2);
+    box-shadow: 0 2px 6px rgba(167, 139, 250, 0.25);
 }
 
 /* Focus outline only visible when keyboard navigating */
@@ -1178,7 +1178,7 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     bottom: 0;
     left: 0;
     width: 0;
-    height: 3px;
+    height: 2px;
     background: linear-gradient(90deg, var(--lavender-500) 0%, var(--lavender-700) 100%);
     transition: width var(--transition-base);
     border-radius: var(--radius-sm)
@@ -1191,7 +1191,7 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     }
 .nav-link.active {
     color: var(--lavender-700);
-    font-weight: var(--font-weight-semibold)
+    font-weight: 600
     }
 /* Header Actions - Use utility classes: flex items-center gap-md */
 
@@ -1257,10 +1257,12 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 .btn-primary {
     background: linear-gradient(135deg, var(--lavender-500) 0%, var(--lavender-600) 50%, var(--lavender-700) 100%);
     color: white;
-    box-shadow: 0 2px 6px rgba(167, 139, 250, 0.3), 0 1px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 12px rgba(167, 139, 250, 0.25), 0 2px 4px rgba(167, 139, 250, 0.15);
     border: none;
     font-weight: 600;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 1.0625rem;
+    letter-spacing: -0.01em;
+    text-shadow: none;
 }
 
 .btn-primary::before {
@@ -1276,9 +1278,9 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 }
 
 .btn-primary:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(167, 139, 250, 0.4),
-                0 3px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(167, 139, 250, 0.35),
+                0 4px 12px rgba(167, 139, 250, 0.2);
     background: linear-gradient(135deg,
         var(--lavender-600) 0%,
         var(--lavender-700) 50%,
@@ -1483,32 +1485,30 @@ section.dark-context .btn-outline:hover,
     padding-top: clamp(1rem, 3vh, 2rem);
 }
 
-/* Premium Hero Title - Efficient & Impactful */
+/* Modern Hero Title - Google Material Design Inspired */
 .hero-title {
     font-family: var(--font-display);
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    margin: 0 auto 0.875rem;
+    font-size: clamp(2.75rem, 6.5vw, 4.5rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin: 0 auto 1.25rem;
     max-width: 950px;
-    color: var(--gray-900);
-    text-shadow:
-        0 1px 2px rgba(255, 255, 255, 0.5),
-        0 2px 8px rgba(167, 139, 250, 0.15);
+    color: #2D3748;
+    text-shadow: none;
 }
 
-/* Premium Hero Subtitle - Efficient & Clear */
+/* Modern Hero Subtitle - Clear & Readable */
 .hero-subtitle {
     font-family: var(--font-body);
-    font-size: clamp(1.0625rem, 2vw, 1.25rem);
+    font-size: clamp(1.125rem, 2.2vw, 1.375rem);
     font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 0.01em;
-    color: var(--gray-700);
-    max-width: 700px;
-    margin: 0 auto 1rem;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    line-height: 1.65;
+    letter-spacing: -0.01em;
+    color: #4A5568;
+    max-width: 720px;
+    margin: 0 auto 2rem;
+    text-shadow: none;
 }
 
 /* Hero buttons - Use utility classes: flex gap-sm justify-center items-center flex-wrap m-0 */
@@ -1912,7 +1912,7 @@ section.dark-context .btn-outline:hover,
 /* Services Showcase */
 .services {
     padding: clamp(2.5rem, 6vh, 3.5rem) 0;
-    background: var(--white)
+    background: transparent
     }
 .services-showcase {
     gap: var(--space-xl);
@@ -2043,7 +2043,7 @@ section.dark-context .btn-outline:hover,
 /* Why Choose Us */
 .why-choose {
     padding: clamp(3rem, 8vh, 4.5rem) 0;
-    background: linear-gradient(180deg, #FFFDF8 0%, #FFFFFF 100%);
+    background: transparent;
     position: relative
     }
 .why-grid {
@@ -2083,7 +2083,7 @@ section.dark-context .btn-outline:hover,
 /* Testimonials - Fortune 100 Design */
 .testimonials {
     padding: clamp(3rem, 8vh, 4.5rem) 0;
-    background: var(--white);
+    background: transparent;
     position: relative;
     }
 .testimonials-grid {
@@ -2162,7 +2162,7 @@ section.dark-context .btn-outline:hover,
 /* Value Propositions Section */
 .value-props {
     padding: clamp(3rem, 8vh, 4.5rem) 0;
-    background: var(--white)
+    background: transparent
     }
 .value-props-grid {
     display: grid;
@@ -2443,32 +2443,30 @@ section.dark-context .btn-outline:hover,
     z-index: 2;
 }
 
-/* CTA Title - Dark text on pastel */
+/* CTA Title - Modern & Inviting */
 .cta .cta-title {
     font-family: var(--font-display);
-    font-size: clamp(2rem, 4.5vw, 3rem);
-    font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    margin: 0 auto 1.25rem;
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    margin: 0 auto 1.5rem;
     max-width: 800px;
-    color: var(--gray-900);
-    text-shadow:
-        0 1px 2px rgba(255, 255, 255, 0.5),
-        0 2px 8px rgba(167, 139, 250, 0.15);
+    color: #2D3748;
+    text-shadow: none;
 }
 
-/* CTA Subtitle - Soft dark on pastel */
+/* CTA Subtitle - Clear & Actionable */
 .cta .cta-subtitle {
     font-family: var(--font-body);
-    font-size: clamp(0.9375rem, 1.8vw, 1.125rem);
+    font-size: clamp(1.0625rem, 2vw, 1.25rem);
     font-weight: 400;
-    line-height: 1.6;
-    letter-spacing: 0.01em;
-    color: var(--gray-700);
+    line-height: 1.65;
+    letter-spacing: -0.01em;
+    color: #4A5568;
     max-width: 650px;
-    margin: 0 auto 1.75rem;
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+    margin: 0 auto 2.25rem;
+    text-shadow: none;
 }
 
 /* CTA Guarantee */
@@ -2896,54 +2894,55 @@ section.dark-context .btn-outline:hover,
     }
 /* ====================== 12. FOOTER ====================== */
 .footer {
-    background: linear-gradient(180deg, var(--gray-700) 0%, var(--gray-800) 100%);
-    color: var(--white);
-    padding: clamp(2rem, 5vh, 2.75rem) 0 clamp(1.25rem, 3vh, 1.75rem);  /* TIGHTER - 20% more reduction */
-    border-top: 3px solid var(--lavender-700);
+    background: linear-gradient(180deg, #F8F4FB 0%, #F5F0FA 100%);
+    color: #2D3748;
+    padding: clamp(3rem, 6vh, 4rem) 0 clamp(1.5rem, 3vh, 2rem);
+    border-top: 1px solid rgba(167, 139, 250, 0.15);
     }
 .footer-content, .footer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--space-xl);
+    gap: clamp(2rem, 4vw, 3rem);
     margin-bottom: var(--space-md) !important;
-    align-items: start;  /* FIX: Align all columns to top */
+    align-items: start;
     }
 .footer-section, .footer-col {
-    color: var(--white)
+    color: #2D3748
     }
 .footer-title {
-    font-size: clamp(1.75rem, 4vw, 2.25rem) !important;  /* EVEN LARGER - 20% increase */
-    font-weight: 900;  /* Maximum boldness */
-    margin-bottom: 0.375rem !important;  /* TIGHTER - better grouping with tagline */
+    font-size: clamp(1.75rem, 4vw, 2.25rem) !important;
+    font-weight: 600;
+    margin-bottom: 0.5rem !important;
     letter-spacing: -0.025em;
-    color: var(--white);
+    background: linear-gradient(135deg, var(--lavender-600) 0%, var(--lavender-700) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-transform: none;
-    line-height: 1.1;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.25);  /* More prominent shadow */
+    line-height: 1.2;
     }
 .footer-description {
-    color: rgba(255, 255, 255, 0.9);  /* Good contrast */
-    line-height: 1.6;
+    color: #4A5568;
+    line-height: 1.65;
     margin-bottom: var(--space-md);
     font-size: 0.9375rem;
     }
 
 /* Footer text - same as description */
 .footer-text {
-    color: rgba(255, 255, 255, 0.88);  /* Slightly lighter for hierarchy */
-    line-height: 1.5;
+    color: #4A5568;
+    line-height: 1.65;
     margin-bottom: 1rem;
     font-size: 0.9375rem;
 }
 
 .footer-heading {
-    font-size: 1.1875rem;
-    font-weight: 800;  /* MUCH BOLDER - increased from 700 */
-    margin-bottom: var(--space-sm);
-    color: var(--white);
-    letter-spacing: 0.05em;  /* MORE tracking for uppercase */
-    text-transform: uppercase;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.15);  /* Subtle depth */
+    font-size: 1.0625rem;
+    font-weight: 600;
+    margin-bottom: clamp(0.75rem, 2vh, 1rem);
+    color: #2D3748;
+    letter-spacing: -0.01em;
+    text-transform: none;
     }
 .footer-links, .footer-contact {
     list-style: none
@@ -2952,17 +2951,16 @@ section.dark-context .btn-outline:hover,
     margin-bottom: 0.625rem;
     }
 .footer-links a, .footer-contact a {
-    color: rgba(255, 255, 255, 0.92);  /* BRIGHTER for better readability */
+    color: #4A5568;
     transition: var(--transition-fast);
     display: inline-block;
     line-height: 1.6;
-    font-size: 0.9375rem;  /* Consistent sizing */
-    font-weight: 400;  /* Regular weight for links */
+    font-size: 0.9375rem;
+    font-weight: 400;
     }
 .footer-links a:hover, .footer-contact a:hover {
-    color: var(--lavender-500);
-    transform: translateX(3px);  /* Subtle hover effect */
-    text-decoration: underline;  /* Visual feedback */
+    color: var(--lavender-700);
+    transform: translateX(3px);
     }
 
 /* CRITICAL: Make contact info prominent and well-spaced */
@@ -2974,8 +2972,8 @@ section.dark-context .btn-outline:hover,
 .footer-contact a,
 .footer-contact p {
     font-size: 0.9375rem;
-    color: rgba(255, 255, 255, 0.92);  /* Higher contrast */
-    font-weight: 400;  /* Regular weight for consistency */
+    color: #4A5568;
+    font-weight: 400;
     line-height: 1.6;
     display: inline;
 }
