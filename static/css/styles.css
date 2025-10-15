@@ -2771,7 +2771,10 @@ section.dark-context .btn-outline:hover,
     font-size: 0.9375rem;
     }
 .faq-item.active .faq-answer {
-    max-height: 800px;
+    max-height: 3000px !important;
+    opacity: 1 !important;
+    padding: 0 var(--space-2xl) var(--space-2xl) var(--space-2xl) !important;
+    padding-top: var(--space-xl) !important;
     }
 /* Contact Form Section */
 .contact-form-section {
