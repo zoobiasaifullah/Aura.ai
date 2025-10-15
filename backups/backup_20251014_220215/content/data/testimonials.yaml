@@ -1,0 +1,33 @@
+# Testimonials
+# Edit this file to add/update customer testimonials
+
+testimonials:
+  - id: sarah-m
+    name: "Sarah M."
+    location: "Los Angeles, CA"
+    rating: 5
+    avatar_icon: "fa-user"
+    order: 1
+    quote: |
+      Finally, a skincare routine that actually works! Aura's AI nailed my skin type 
+      and the 3 products recommended have completely transformed my complexion. No more wasting money on products that don't work.
+    
+  - id: james-t
+    name: "James T."
+    location: "Austin, TX"
+    rating: 5
+    avatar_icon: "fa-user"
+    order: 2
+    quote: |
+      As a guy who knew nothing about skincare, Aura made it so simple. The quiz was 
+      quick, the analysis was spot-on, and now I have clear skin for the first time in years. Game changer!
+    
+  - id: priya-k
+    name: "Priya K."
+    location: "New York, NY"
+    rating: 5
+    avatar_icon: "fa-user"
+    order: 3
+    quote: |
+      I love how transparent everything is. Seeing all the ingredients and knowing 
+      exactly what I'm putting on my face gives me so much confidence. Plus, only 2 products? My routine has never been easier!

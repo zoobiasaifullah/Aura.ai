@@ -241,7 +241,7 @@
 .card:hover {
     transform: translatey(-6px);
     box-shadow: var(--shadow-xl);
-    border-color: rgba(216, 67, 67, 0.3)
+    border-color: rgba(167, 139, 250, 0.3)
     }
 .card::before {
     content: "";
@@ -250,7 +250,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(216, 67, 67, 0.02) 0%, rgba(11, 154, 141, 0.02) 100%);
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.02) 0%, rgba(11, 154, 141, 0.02) 100%);
     opacity: 0;
     transition: opacity var(--transition-base);
     border-radius: var(--radius-lg);
@@ -740,7 +740,12 @@ body {
     font-weight: var(--font-weight-normal);
     line-height: var(--line-height-loose);
     color: var(--gray-700);
-    background-color: var(--white);
+    background: linear-gradient(180deg, 
+        var(--lavender-50) 0%, 
+        var(--white) 20%, 
+        var(--white) 80%, 
+        var(--lavender-50) 100%);
+    background-attachment: fixed;
     overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
@@ -1150,12 +1155,12 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     background: linear-gradient(135deg, var(--lavender-600) 0%, var(--lavender-700) 100%);
     color: white;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 4px 12px rgba(167, 139, 250, 0.3);
 }
 
 .nav-link.btn.btn-primary:active {
     transform: translateY(0);
-    box-shadow: 0 2px 6px rgba(255, 107, 107, 0.2);
+    box-shadow: 0 2px 6px rgba(167, 139, 250, 0.2);
 }
 
 /* Focus outline only visible when keyboard navigating */
@@ -1249,7 +1254,7 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 .btn-primary {
     background: linear-gradient(135deg, var(--lavender-500) 0%, var(--lavender-600) 50%, var(--lavender-700) 100%);
     color: white;
-    box-shadow: 0 2px 6px rgba(255, 107, 107, 0.3), 0 1px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 6px rgba(167, 139, 250, 0.3), 0 1px 3px rgba(0, 0, 0, 0.12);
     border: none;
     font-weight: 600;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -1269,12 +1274,12 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 
 .btn-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4),
+    box-shadow: 0 6px 20px rgba(167, 139, 250, 0.4),
                 0 3px 10px rgba(0, 0, 0, 0.15);
     background: linear-gradient(135deg,
-        var(--gray-700) 0%,
-        var(--gray-800) 50%,
-        var(--gray-900) 100%);
+        var(--lavender-600) 0%,
+        var(--lavender-700) 50%,
+        var(--lavender-800) 100%);
     color: white;
 }
 
@@ -1285,8 +1290,8 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 .btn-primary:active {
     transform: translateY(0px);  /* Return to original position for "pressed" feel */
     transition-duration: 0.1s;
-    box-shadow: 0 2px 8px rgba(51, 78, 104, 0.35);  /* Navy shadow when pressed */
-    background: var(--gray-900);  /* Solid dark navy when pressed */
+    box-shadow: 0 2px 8px rgba(167, 139, 250, 0.35);  /* Lavender shadow when pressed */
+    background: var(--lavender-800);  /* Solid dark lavender when pressed */
 }
 
 .btn-primary:focus-visible {
@@ -1430,7 +1435,7 @@ section.dark-context .btn-outline:hover,
         135deg,
         rgba(16, 42, 67, 0.93) 0%,
         rgba(36, 59, 83, 0.90) 50%,
-        rgba(51, 78, 104, 0.88) 100%
+        rgba(64, 64, 64, 0.88) 100%
     );
     z-index: 1;
 }
@@ -1600,7 +1605,7 @@ section.dark-context .btn-outline:hover,
     border-radius: var(--radius-full);
     font-size: var(--font-size-sm);
     font-weight: 600;
-    box-shadow: 0 2px 10px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 2px 10px rgba(167, 139, 250, 0.3);
     z-index: 2
     }
 .service-badge.urgent {
@@ -1682,7 +1687,7 @@ section.dark-context .btn-outline:hover,
     }
 .card-faq.active, .accordion-item.active {
     border-color: var(--lavender-700);
-    box-shadow: 0 8px 24px rgba(216, 67, 67, 0.12)
+    box-shadow: 0 8px 24px rgba(167, 139, 250, 0.12)
     }
 /* Accordion Question/Header - Refined */
 .faq-question, .accordion-header, .accordion-question {
@@ -1720,7 +1725,7 @@ section.dark-context .btn-outline:hover,
     border-radius: var(--radius-md);
     }
 .card-faq.active .faq-question, .accordion-item.active .accordion-header {
-    background: linear-gradient(90deg, rgba(216, 67, 67, 0.03) 0%, transparent 100%)
+    background: linear-gradient(90deg, rgba(167, 139, 250, 0.03) 0%, transparent 100%)
     }
 .card-faq.active .faq-question::before, .accordion-item.active .accordion-header::before {
     width: 4px;
@@ -1781,7 +1786,7 @@ section.dark-context .btn-outline:hover,
     background: linear-gradient(135deg, var(--lavender-700) 0%, var(--lavender-500) 100%);
     color: var(--white);
     transform: rotate(135deg);
-    box-shadow: 0 4px 12px rgba(216, 67, 67, 0.3)
+    box-shadow: 0 4px 12px rgba(167, 139, 250, 0.3)
     }
 .card-faq.active .faq-toggle::after, .accordion-item.active .accordion-toggle::after {
     opacity: 0
@@ -1894,7 +1899,7 @@ section.dark-context .btn-outline:hover,
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(78, 205, 196, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.03) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 50%, rgba(95, 234, 207, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(167, 139, 250, 0.03) 0%, transparent 50%);
     pointer-events: none
     }
 .value-prop-grid {
@@ -3433,3 +3438,4 @@ section.dark-context .btn-outline:hover,
 
 /* ======================
    END OF STYLESHEET
+
