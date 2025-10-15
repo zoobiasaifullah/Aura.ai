@@ -9,7 +9,7 @@ services:
     price: "Free"
     price_period: "instant results"
     badge: "Most Popular"
-    image: "images/services/service-property-visit.jpg"
+    image: "https://images.unsplash.com/photo-1556227834-09f1de7a7d14?w=800&q=80"
     image_alt: "AI-powered skin analysis using advanced facial recognition technology"
     cta_text: "Try It Now"
     cta_link: "contact.html"
@@ -31,7 +31,7 @@ services:
     price: "2 minutes"
     price_period: "to complete"
     badge: null
-    image: "images/services/service-translation.jpg"
+    image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=800&q=80"
     image_alt: "Interactive quiz interface for personalized skincare recommendations"
     cta_text: "Start Quiz"
     cta_link: "contact.html"
@@ -53,7 +53,7 @@ services:
     price: "2-3 Products"
     price_period: "only essentials"
     badge: null
-    image: "images/services/service-transportation.jpg"
+    image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80"
     image_alt: "Simple 2-3 product minimalist skincare routine customized for individual skin needs"
     cta_text: "Get My Routine"
     cta_link: "contact.html"

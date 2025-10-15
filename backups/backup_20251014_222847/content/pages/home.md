@@ -8,8 +8,8 @@ page_id: "home"
 hero:
   title: "Your Skin, Simplified by Science"
   subtitle: "AI-powered skin analysis meets personalized care. Take a selfie, answer a few questions, and get a minimalist routine with 2–3 essential products from our curated, ingredient-transparent catalog."
-  image: "images/hero/hero-main.jpg"
-  image_alt: "Woman analyzing her skin with Aura's AI-powered skincare app on her phone"
+  image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1920&q=80"
+  image_alt: "Soft pastel illustration of woman with glowing healthy skin surrounded by gentle botanical elements"
   cta_primary:
     text: "Start Your Skin Analysis"
     url: "#contact"
@@ -41,7 +41,7 @@ services:
 cta:
   title: "Ready to Transform Your Skincare Routine?"
   description: "Start your free skin analysis today and discover the products your skin actually needs"
-  background_image: "images/hero/hero-main.jpg"
+  background_image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1920&q=80"
   buttons:
     - text: "Analyze My Skin Now"
       url: "#contact"
