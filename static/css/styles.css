@@ -2688,8 +2688,8 @@ section.dark-context .btn-outline:hover,
     background: linear-gradient(180deg, #FFF9FB 0%, #F8F4FB 100%);
     }
 .faq-container {
-    max-width: 850px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     }
 .faq-item {
     margin-bottom: var(--space-md);
@@ -2981,7 +2981,7 @@ section.dark-context .btn-outline:hover,
 /* Style for contact labels - INLINE with consistent spacing */
 .footer-contact strong,
 .footer-contact b {
-    color: rgba(255, 255, 255, 0.7);  /* Subtle label */
+    color: #404040;  /* Darker, more readable */
     font-weight: 600;
     display: inline;
     margin-bottom: 0;
@@ -2992,11 +2992,11 @@ section.dark-context .btn-outline:hover,
 }
 
 .footer .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    padding-top: var(--space-sm);
-    margin-top: var(--space-sm);
+    border-top: 1px solid rgba(167, 139, 250, 0.15);
+    padding-top: var(--space-md);
+    margin-top: var(--space-lg);
     text-align: center;
-    color: rgba(255, 255, 255, 0.85);
+    color: #525252;
     flex-direction: column-reverse;  /* CRITICAL: Reverse order - Back to Top first */
     gap: 0.5rem;
     }
@@ -3006,6 +3006,7 @@ section.dark-context .btn-outline:hover,
     line-height: 1.5;
     text-align: center;
     width: 100%;
+    color: #525252;
     }
 
 /* Back to Top link styling */
@@ -3014,9 +3015,10 @@ section.dark-context .btn-outline:hover,
 }
 
 .back-to-top {
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--lavender-700);
     text-decoration: none;
     font-size: 0.875rem;
+    font-weight: 500;
     transition: all 0.2s ease;
     display: inline-block;
 }
