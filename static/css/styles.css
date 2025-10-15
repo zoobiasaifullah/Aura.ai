@@ -1788,7 +1788,7 @@ section.dark-context .btn-outline:hover,
     transition: max-height var(--transition-slowest), padding var(--transition-slowest), opacity var(--transition-slow);
     opacity: 0;
     }
-.card-faq.active .faq-answer, .accordion-item.active .accordion-content, .faq-answer.active {
+.card-faq.active .faq-answer, .accordion-item.active .accordion-content, .faq-item.active .faq-answer {
     max-height: 3000px;
     padding: 0 var(--space-2xl) var(--space-2xl) var(--space-2xl);
     padding-top: var(--space-xl);
