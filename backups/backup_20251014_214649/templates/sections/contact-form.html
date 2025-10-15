@@ -1,0 +1,116 @@
+<section class="contact-form-section" id="contact-form">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Start Your Skin Analysis</h2>
+            <p class="section-subtitle">Get your personalized skincare routine in minutes—completely free</p>
+        </div>
+        
+        <div class="contact-form-wrapper">
+            <!-- TO ACTIVATE FORM: Sign up at formspree.io and replace YOUR_FORM_ID below -->
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-row grid">
+                    <div class="form-group">
+                        <label for="name">Full Name <span class="required">*</span></label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required 
+                            placeholder="Sarah Johnson"
+                            aria-required="true">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            placeholder="sarah@example.com"
+                            aria-required="true">
+                    </div>
+                </div>
+                
+                <div class="form-row grid">
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="(555) 123-4567">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="skin-type">Primary Skin Concern</label>
+                        <input 
+                            type="text" 
+                            id="skin-type" 
+                            name="skin_concern" 
+                            placeholder="e.g., Acne, Dryness, Aging">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">What Are You Looking For?</label>
+                    <select id="service" name="service">
+                        <option value="">Select an option...</option>
+                        <option value="full-analysis">Complete Skin Analysis + Routine</option>
+                        <option value="skin-concerns">Help With Specific Skin Concerns</option>
+                        <option value="routine-simplify">Simplify My Current Routine</option>
+                        <option value="product-recommendations">Product Recommendations Only</option>
+                        <option value="other">Other / Just Exploring</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Tell Us About Your Skin (Optional)</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="5" 
+                        placeholder="Share any skin concerns, allergies, or products you've tried before..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-sparkles"></i> Get My Free Analysis
+                    </button>
+                </div>
+                
+                <div class="form-message" id="formMessage" role="alert" aria-live="polite"></div>
+            </form>
+            
+            <div class="contact-info-sidebar">
+                <h3>Quick Support</h3>
+                <div class="contact-info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email Us</strong>
+                        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-comments"></i>
+                    <div>
+                        <strong>Live Chat</strong>
+                        <a href="#" target="_blank" rel="noopener">Chat with support</a>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div>
+                        <strong>Download App</strong>
+                        <p>Coming soon to iOS & Android</p>
+                    </div>
+                </div>
+                
+                <div class="response-time flex items-center">
+                    <i class="fas fa-bolt"></i>
+                    <p><strong>Get Results:</strong> Instant AI analysis</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,81 @@
+# Services Configuration
+# Edit this file to update service offerings
+
+services:
+  - id: ai-skin-analysis
+    title: "AI Skin Analysis"
+    icon: "fa-camera"
+    icon_color: "default"
+    price: "Free"
+    price_period: "instant results"
+    badge: "Most Popular"
+    image: "images/services/service-property-visit.jpg"
+    image_alt: "AI-powered skin analysis using advanced facial recognition technology"
+    cta_text: "Try It Now"
+    cta_link: "contact.html"
+    order: 1
+    description: |
+      Upload a selfie and let our advanced AI analyze your skin in seconds. Get accurate 
+      insights on skin type, concerns, texture, and problem areas—all powered by dermatology-backed algorithms.
+    features:
+      - "Instant skin type detection"
+      - "Identifies skin concerns & problem areas"
+      - "Texture & tone analysis"
+      - "Hydration & oiliness assessment"
+      - "Privacy-first: your photos stay secure"
+
+  - id: smart-quiz
+    title: "Personalized Smart Quiz"
+    icon: "fa-clipboard-list"
+    icon_color: "teal"
+    price: "2 minutes"
+    price_period: "to complete"
+    badge: null
+    image: "images/services/service-translation.jpg"
+    image_alt: "Interactive quiz interface for personalized skincare recommendations"
+    cta_text: "Start Quiz"
+    cta_link: "contact.html"
+    order: 2
+    description: |
+      Answer a few simple questions about your lifestyle, preferences, and skin goals. 
+      Our smart algorithm combines your quiz results with AI analysis for perfectly tailored recommendations.
+    features:
+      - "Questions about lifestyle & environment"
+      - "Budget & product preferences"
+      - "Skin goals & sensitivities"
+      - "Ingredient preferences & allergies"
+      - "Takes just 2 minutes to complete"
+
+  - id: personalized-routine
+    title: "Your Minimalist Routine"
+    icon: "fa-spa"
+    icon_color: "navy"
+    price: "2-3 Products"
+    price_period: "only essentials"
+    badge: null
+    image: "images/services/service-transportation.jpg"
+    image_alt: "Simple 2-3 product minimalist skincare routine customized for individual skin needs"
+    cta_text: "Get My Routine"
+    cta_link: "contact.html"
+    order: 3
+    description: |
+      No more confusion. Get a personalized routine with just 2–3 essential products 
+      from our curated catalog. Every product is ingredient-transparent, science-backed, and perfect for your unique skin.
+    features:
+      - "Only 2-3 essential products recommended"
+      - "Curated from trusted, vetted brands"
+      - "Complete ingredient transparency"
+      - "Science-backed formulations"
+      - "Easy-to-follow routine instructions"
+
+# Service Packages (optional custom offerings)
+packages:
+  monthly_basic:
+    name: "Free Analysis"
+    price: "$0"
+    description: "AI skin analysis + smart quiz + personalized routine"
+    
+  monthly_premium:
+    name: "Aura Plus"
+    price: "$9.99/mo"
+    description: "Monthly skin tracking + progress photos + routine adjustments"

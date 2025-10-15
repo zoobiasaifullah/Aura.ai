@@ -44,7 +44,7 @@ class SiteBuilder:
             'toc'
         ])
         
-        print("🏗️  Legs on the Ground - Site Builder")
+        print("Building Aura - AI-Powered Skincare Site")
         print("=" * 50)
     
     def load_yaml(self, path):

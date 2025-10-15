@@ -1,0 +1,36 @@
+# Why Choose Us Section
+# Edit this file to update the reasons customers trust you
+
+why_choose:
+  section_title: "Why Choose Aura for Your Skincare"
+  
+  reasons:
+    - id: science-backed
+      title: "Dermatology-Backed AI"
+      icon: "fa-microscope"
+      image: "images/about/about-bilingual.jpg"
+      image_alt: "Advanced AI technology backed by dermatology research and science"
+      order: 1
+      description: |
+        Our AI is trained on thousands of dermatology cases and validated by skincare 
+        experts. Get recommendations you can trust, backed by real science—not marketing hype.
+    
+    - id: curated-catalog
+      title: "Carefully Curated Products"
+      icon: "fa-check-circle"
+      image: "images/about/about-local-knowledge.jpg"
+      image_alt: "Curated selection of vetted skincare products with transparent ingredients"
+      order: 2
+      description: |
+        Every product in our catalog is hand-selected and rigorously vetted for quality, 
+        efficacy, and safety. Only the best, most trusted brands with proven ingredients make the cut.
+    
+    - id: minimalist-approach
+      title: "Less is More Philosophy"
+      icon: "fa-star"
+      image: "images/about/about-experience.jpg"
+      image_alt: "Minimalist skincare routine with only essential products for healthy skin"
+      order: 3
+      description: |
+        Your skin doesn't need 10 products. Our minimalist approach focuses on 2–3 
+        essentials that work together perfectly. Save time, save money, see better results.
