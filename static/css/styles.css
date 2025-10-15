@@ -741,13 +741,13 @@ body {
     line-height: var(--line-height-loose);
     color: var(--gray-700);
     background: linear-gradient(180deg, 
-        #F5E6F9 0%,
-        #FFF5F7 15%,
-        #FFFBF0 30%,
+        #F8F4FB 0%,
+        #FFF9FB 20%,
+        #FFFDF8 40%,
         #FFFFFF 50%,
-        #FFFBF0 70%,
-        #FFF5F7 85%,
-        #F5E6F9 100%);
+        #FFFDF8 60%,
+        #FFF9FB 80%,
+        #F8F4FB 100%);
     background-attachment: fixed;
     overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
@@ -2043,7 +2043,7 @@ section.dark-context .btn-outline:hover,
 /* Why Choose Us */
 .why-choose {
     padding: clamp(3rem, 8vh, 4.5rem) 0;
-    background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+    background: linear-gradient(180deg, #FFFDF8 0%, #FFFFFF 100%);
     position: relative
     }
 .why-grid {
@@ -2225,7 +2225,8 @@ section.dark-context .btn-outline:hover,
 .service-card:hover {
     transform: translatey(-4px);
     box-shadow: var(--shadow-xl);
-    border-color: var(--mint-300)
+    border-color: var(--mint-300);
+    background: linear-gradient(135deg, #FEFDFB 0%, #FFF9FB 100%);
     }
 .service-badge {
     position: absolute;
@@ -2686,7 +2687,7 @@ section.dark-context .btn-outline:hover,
 /* FAQ Section - Soft pastel ethereal design */
 .faq-section {
     padding: clamp(2.5rem, 6vh, 3.5rem) 0;
-    background: linear-gradient(180deg, #FFF5F7 0%, #F5E6F9 100%);
+    background: linear-gradient(180deg, #FFF9FB 0%, #F8F4FB 100%);
     }
 .faq-container {
     max-width: 850px;

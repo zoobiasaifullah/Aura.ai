@@ -741,10 +741,13 @@ body {
     line-height: var(--line-height-loose);
     color: var(--gray-700);
     background: linear-gradient(180deg, 
-        var(--lavender-50) 0%, 
-        var(--white) 20%, 
-        var(--white) 80%, 
-        var(--lavender-50) 100%);
+        #F8F4FB 0%,
+        #FFF9FB 20%,
+        #FFFDF8 40%,
+        #FFFFFF 50%,
+        #FFFDF8 60%,
+        #FFF9FB 80%,
+        #F8F4FB 100%);
     background-attachment: fixed;
     overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
@@ -1418,29 +1421,16 @@ section.dark-context .btn-outline:hover,
     position: relative;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     min-height: clamp(380px, 45vh, 480px);
-    padding: clamp(2rem, 5vh, 3rem) var(--space-lg) clamp(1.5rem, 4vh, 2.5rem);  /* ULTRA COMPACT padding */
+    padding: clamp(2rem, 5vh, 3rem) var(--space-lg) clamp(1.5rem, 4vh, 2.5rem);
 }
 
-/* Premium gradient overlay - sophisticated depth */
+/* Removed dark overlay - using soft pastel gradient instead */
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(16, 42, 67, 0.93) 0%,
-        rgba(36, 59, 83, 0.90) 50%,
-        rgba(64, 64, 64, 0.88) 100%
-    );
-    z-index: 1;
+    content: none;
 }
 
-/* Subtle grain texture for Fortune 100 premium feel */
+/* Subtle soft texture for ethereal feel */
 .hero::after {
     content: '';
     position: absolute;
@@ -1449,7 +1439,7 @@ section.dark-context .btn-outline:hover,
     right: 0;
     bottom: 0;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.025;
+    opacity: 0.015;
     mix-blend-mode: overlay;
     pointer-events: none;
     z-index: 2;
@@ -1485,7 +1475,7 @@ section.dark-context .btn-outline:hover,
 .hero-content {
     position: relative;
     z-index: 3;
-    color: white;
+    color: var(--gray-900);
     text-align: center;
     max-width: 1100px;
     margin: 0 auto;
@@ -1502,10 +1492,10 @@ section.dark-context .btn-outline:hover,
     letter-spacing: -0.02em;
     margin: 0 auto 0.875rem;
     max-width: 950px;
-    color: white;
+    color: var(--gray-900);
     text-shadow:
-        0 1px 2px rgba(0, 0, 0, 0.1),
-        0 4px 12px rgba(0, 0, 0, 0.15);
+        0 1px 2px rgba(255, 255, 255, 0.5),
+        0 2px 8px rgba(167, 139, 250, 0.15);
 }
 
 /* Premium Hero Subtitle - Efficient & Clear */
@@ -1515,7 +1505,7 @@ section.dark-context .btn-outline:hover,
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.01em;
-    color: rgba(255, 255, 255, 0.95);
+    color: var(--gray-700);
     max-width: 700px;
     margin: 0 auto 1rem;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
@@ -2053,7 +2043,7 @@ section.dark-context .btn-outline:hover,
 /* Why Choose Us */
 .why-choose {
     padding: clamp(3rem, 8vh, 4.5rem) 0;
-    background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+    background: linear-gradient(180deg, #FFFDF8 0%, #FFFFFF 100%);
     position: relative
     }
 .why-grid {
@@ -2235,7 +2225,8 @@ section.dark-context .btn-outline:hover,
 .service-card:hover {
     transform: translatey(-4px);
     box-shadow: var(--shadow-xl);
-    border-color: var(--mint-300)
+    border-color: var(--mint-300);
+    background: linear-gradient(135deg, #FEFDFB 0%, #FFF9FB 100%);
     }
 .service-badge {
     position: absolute;
@@ -2425,22 +2416,25 @@ section.dark-context .btn-outline:hover,
     position: relative;
     background-size: cover;
     background-position: center;
-    color: white;
+    color: var(--gray-900);
     padding: clamp(3rem, 8vh, 4.5rem) var(--space-xl) clamp(2.5rem, 6vh, 3.5rem);
     text-align: center;
     overflow: hidden;
 }
 
-/* Override inline background with proper overlay - !important needed to override inline styles */
+/* Soft texture overlay for ethereal feel */
 .cta::before {
-    content: '' !important;  /* Required: Override inline pseudo-element */
-    position: absolute !important;  /* Required: Override inline positioning */
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    background: rgba(16, 42, 67, 0.85);  /* DARK OVERLAY for text contrast */
-    z-index: 1 !important;  /* Required: Ensure overlay is below content */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.015;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .cta .container,
@@ -2449,7 +2443,7 @@ section.dark-context .btn-outline:hover,
     z-index: 2;
 }
 
-/* CTA Title - WHITE for contrast */
+/* CTA Title - Dark text on pastel */
 .cta .cta-title {
     font-family: var(--font-display);
     font-size: clamp(2rem, 4.5vw, 3rem);
@@ -2458,40 +2452,39 @@ section.dark-context .btn-outline:hover,
     letter-spacing: -0.02em;
     margin: 0 auto 1.25rem;
     max-width: 800px;
-    color: white;
+    color: var(--gray-900);
     text-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.3),
-        0 4px 12px rgba(0, 0, 0, 0.2);
+        0 1px 2px rgba(255, 255, 255, 0.5),
+        0 2px 8px rgba(167, 139, 250, 0.15);
 }
 
-/* CTA Subtitle - HIGH CONTRAST WHITE */
+/* CTA Subtitle - Soft dark on pastel */
 .cta .cta-subtitle {
     font-family: var(--font-body);
     font-size: clamp(0.9375rem, 1.8vw, 1.125rem);
     font-weight: 400;
     line-height: 1.6;
     letter-spacing: 0.01em;
-    color: rgba(255, 255, 255, 0.95);
+    color: var(--gray-700);
     max-width: 650px;
     margin: 0 auto 1.75rem;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
 }
 
-/* CTA Guarantee - HIGH CONTRAST WHITE */
+/* CTA Guarantee */
 .cta .cta-guarantee {
     font-family: var(--font-body);
     font-size: clamp(0.875rem, 1.4vw, 1rem);
     font-weight: 500;
     line-height: 1.5;
-    color: rgba(255, 255, 255, 0.95);
+    color: var(--gray-700);
     margin-top: 1.5rem;
     padding: 0.75rem 1.5rem;
     display: inline-block;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .cta-guarantee i {
-    color: var(--mint-300);
+    color: var(--lavender-600);
     margin-right: 0.5rem;
     font-size: 1.125em;
 }
@@ -2674,27 +2667,27 @@ section.dark-context .btn-outline:hover,
 .hero-trust-bar {
     margin-top: var(--space-3xl);
     padding-top: var(--space-xl);
-    border-top: 2px solid rgba(255, 255, 255, 0.15);
+    border-top: 2px solid rgba(167, 139, 250, 0.2);
     gap: var(--space-lg);
     justify-content: center;
     }
 
 .trust-item {
-    gap: 0.625rem;  /* Slightly larger gap */
-    color: var(--white);
-    font-size: 0.9375rem;  /* Slightly larger for readability */
-    font-weight: 600;  /* Bolder */
+    gap: 0.625rem;
+    color: var(--gray-800);
+    font-size: 0.9375rem;
+    font-weight: 600;
     white-space: nowrap;
     }
 .trust-item i {
-    color: var(--lavender-500);
-    font-size: 1.5rem;  /* Larger icons for visual impact */
+    color: var(--lavender-600);
+    font-size: 1.5rem;
     flex-shrink: 0;
     }
-/* FAQ Section - Fortune 100 Professional Design */
+/* FAQ Section - Soft pastel ethereal design */
 .faq-section {
     padding: clamp(2.5rem, 6vh, 3.5rem) 0;
-    background: var(--gray-50);
+    background: linear-gradient(180deg, #FFF9FB 0%, #F8F4FB 100%);
     }
 .faq-container {
     max-width: 850px;
