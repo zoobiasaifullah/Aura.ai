@@ -1,0 +1,185 @@
+/**
+ * Shopify Buy Button Integration for Aura.ai
+ * 
+ * SETUP INSTRUCTIONS:
+ * 1. Go to https://admin.shopify.com/store/aura-aii/buy_button
+ * 2. Create Buy Buttons for each product
+ * 3. Replace the PRODUCT_ID values below with your actual product IDs
+ * 4. Copy the generated script URLs if they're different
+ */
+
+// Load Shopify Buy Button SDK
+(function() {
+    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+    
+    if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+            initializeBuyButtons();
+        } else {
+            loadScript();
+        }
+    } else {
+        loadScript();
+    }
+
+    function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = initializeBuyButtons;
+    }
+
+    function initializeBuyButtons() {
+        // Initialize Shopify Buy Button SDK
+        var client = ShopifyBuy.buildClient({
+            domain: 'aura-aii.myshopify.com', // Your Shopify store domain
+            storefrontAccessToken: 'YOUR_STOREFRONT_ACCESS_TOKEN_HERE' // Get this from Shopify Admin
+        });
+
+        ShopifyBuy.UI.onReady(client).then(function(ui) {
+            // AI Skin Analysis Button - $20
+            createBuyButton(ui, 'AI_SKIN_ANALYSIS_PRODUCT_ID', 'shopify-buy-button-analysis', {
+                product: {
+                    buttonDestination: 'checkout',
+                    contents: {
+                        img: false,
+                        title: false,
+                        price: false
+                    },
+                    text: {
+                        button: 'Get AI Analysis - $20'
+                    },
+                    styles: {
+                        button: {
+                            'font-family': 'Inter, sans-serif',
+                            'font-size': '16px',
+                            'padding': '16px 32px',
+                            'background': 'linear-gradient(135deg, #D946EF 0%, #A855F7 100%)',
+                            'border-radius': '12px',
+                            'font-weight': '600',
+                            ':hover': {
+                                'background': 'linear-gradient(135deg, #C026D3 0%, #9333EA 100%)'
+                            }
+                        }
+                    }
+                },
+                cart: {
+                    styles: {
+                        button: {
+                            'background': 'linear-gradient(135deg, #D946EF 0%, #A855F7 100%)',
+                            'border-radius': '12px'
+                        }
+                    }
+                },
+                toggle: {
+                    styles: {
+                        toggle: {
+                            'background': 'linear-gradient(135deg, #D946EF 0%, #A855F7 100%)'
+                        }
+                    }
+                }
+            });
+
+            // Personalized Quiz Button - $10
+            createBuyButton(ui, 'PERSONALIZED_QUIZ_PRODUCT_ID', 'shopify-buy-button-quiz', {
+                product: {
+                    buttonDestination: 'checkout',
+                    contents: {
+                        img: false,
+                        title: false,
+                        price: false
+                    },
+                    text: {
+                        button: 'Take Quiz - $10'
+                    },
+                    styles: {
+                        button: {
+                            'font-family': 'Inter, sans-serif',
+                            'font-size': '16px',
+                            'padding': '16px 32px',
+                            'background': 'linear-gradient(135deg, #D946EF 0%, #A855F7 100%)',
+                            'border-radius': '12px',
+                            'font-weight': '600',
+                            ':hover': {
+                                'background': 'linear-gradient(135deg, #C026D3 0%, #9333EA 100%)'
+                            }
+                        }
+                    }
+                },
+                cart: {
+                    styles: {
+                        button: {
+                            'background': 'linear-gradient(135deg, #D946EF 0%, #A855F7 100%)',
+                            'border-radius': '12px'
+                        }
+                    }
+                },
+                toggle: {
+                    styles: {
+                        toggle: {
+                            'background': 'linear-gradient(135deg, #D946EF 0%, #A855F7 100%)'
+                        }
+                    }
+                }
+            });
+
+            // Complete Routine Button - $50
+            createBuyButton(ui, 'COMPLETE_ROUTINE_PRODUCT_ID', 'shopify-buy-button-routine', {
+                product: {
+                    buttonDestination: 'checkout',
+                    contents: {
+                        img: false,
+                        title: false,
+                        price: false
+                    },
+                    text: {
+                        button: 'Get Complete Routine - $50'
+                    },
+                    styles: {
+                        button: {
+                            'font-family': 'Inter, sans-serif',
+                            'font-size': '16px',
+                            'padding': '16px 32px',
+                            'background': 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+                            'border-radius': '12px',
+                            'font-weight': '600',
+                            ':hover': {
+                                'background': 'linear-gradient(135deg, #059669 0%, #047857 100%)'
+                            }
+                        }
+                    }
+                },
+                cart: {
+                    styles: {
+                        button: {
+                            'background': 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+                            'border-radius': '12px'
+                        }
+                    }
+                },
+                toggle: {
+                    styles: {
+                        toggle: {
+                            'background': 'linear-gradient(135deg, #10B981 0%, #059669 100%)'
+                        }
+                    }
+                }
+            });
+        });
+    }
+
+    function createBuyButton(ui, productId, containerId, options) {
+        if (!document.getElementById(containerId)) {
+            console.warn('Container not found:', containerId);
+            return;
+        }
+
+        ui.createComponent('product', {
+            id: productId,
+            node: document.getElementById(containerId),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: options
+        });
+    }
+})();

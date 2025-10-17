@@ -354,6 +354,244 @@ essentials that work together perfectly. Save time, save money, see better resul
         </div>
     </div>
 </section>
+<!-- Pricing Section -->
+<section class="pricing-section" id="pricing">
+    <div class="container">
+        <h2 class="section-title">Choose Your Path to Perfect Skin</h2>
+        <p class="section-subtitle">Select the service that fits your needs</p>
+        
+        <div class="pricing-grid">
+            <!-- AI Skin Analysis -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <i class="fas fa-camera pricing-icon"></i>
+                    <h3>AI Skin Analysis</h3>
+                    <p class="pricing-description">Get instant AI-powered insights</p>
+                </div>
+                <div class="pricing-price">
+                    <span class="price-amount">$20</span>
+                    <span class="price-period">one-time</span>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Upload selfie for analysis</li>
+                    <li><i class="fas fa-check"></i> Instant skin type detection</li>
+                    <li><i class="fas fa-check"></i> Problem area identification</li>
+                    <li><i class="fas fa-check"></i> Texture & tone analysis</li>
+                    <li><i class="fas fa-check"></i> Detailed skin report</li>
+                </ul>
+                <!-- Shopify Buy Button will go here -->
+                <div id="shopify-buy-button-analysis" class="shopify-buy-button-container"></div>
+            </div>
+
+            <!-- Personalized Quiz -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <i class="fas fa-clipboard-list pricing-icon"></i>
+                    <h3>Personalized Quiz</h3>
+                    <p class="pricing-description">Smart questionnaire for your routine</p>
+                </div>
+                <div class="pricing-price">
+                    <span class="price-amount">$10</span>
+                    <span class="price-period">one-time</span>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> 2-minute smart quiz</li>
+                    <li><i class="fas fa-check"></i> Lifestyle analysis</li>
+                    <li><i class="fas fa-check"></i> Ingredient preferences</li>
+                    <li><i class="fas fa-check"></i> Budget considerations</li>
+                    <li><i class="fas fa-check"></i> Basic recommendations</li>
+                </ul>
+                <!-- Shopify Buy Button will go here -->
+                <div id="shopify-buy-button-quiz" class="shopify-buy-button-container"></div>
+            </div>
+
+            <!-- Complete Routine (Popular) -->
+            <div class="pricing-card pricing-card-featured">
+                <div class="pricing-badge">Most Popular</div>
+                <div class="pricing-header">
+                    <i class="fas fa-star pricing-icon"></i>
+                    <h3>Complete Routine</h3>
+                    <p class="pricing-description">Full analysis + personalized products</p>
+                </div>
+                <div class="pricing-price">
+                    <span class="price-amount">$50</span>
+                    <span class="price-period">one-time</span>
+                    <span class="price-save">Save $20!</span>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> <strong>Everything</strong> from Analysis</li>
+                    <li><i class="fas fa-check"></i> <strong>Everything</strong> from Quiz</li>
+                    <li><i class="fas fa-check"></i> Personalized 2-3 product routine</li>
+                    <li><i class="fas fa-check"></i> Curated product recommendations</li>
+                    <li><i class="fas fa-check"></i> Step-by-step instructions</li>
+                    <li><i class="fas fa-check"></i> Monthly routine updates</li>
+                </ul>
+                <!-- Shopify Buy Button will go here -->
+                <div id="shopify-buy-button-routine" class="shopify-buy-button-container"></div>
+            </div>
+        </div>
+
+        <div class="pricing-guarantee">
+            <i class="fas fa-shield-check"></i>
+            <p><strong>100% Satisfaction Guarantee</strong> - If you're not satisfied with your analysis, we'll refund you in full.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+.pricing-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8F4FB 100%);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(217, 70, 239, 0.15);
+}
+
+.pricing-card-featured {
+    border: 3px solid #D946EF;
+    transform: scale(1.05);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #D946EF 0%, #A855F7 100%);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-icon {
+    font-size: 3rem;
+    color: #D946EF;
+    margin-bottom: 1rem;
+}
+
+.pricing-header h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.pricing-description {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.pricing-price {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.price-amount {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #D946EF;
+    display: block;
+}
+
+.price-period {
+    font-size: 0.9rem;
+    color: #666;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.price-save {
+    display: inline-block;
+    background: #10B981;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    flex-grow: 1;
+}
+
+.pricing-features li {
+    padding: 0.75rem 0;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.pricing-features i {
+    color: #10B981;
+    flex-shrink: 0;
+}
+
+.shopify-buy-button-container {
+    margin-top: auto;
+}
+
+.pricing-guarantee {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.pricing-guarantee i {
+    color: #10B981;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-card-featured {
+        transform: scale(1);
+    }
+}
+</style>
 <!-- Testimonials Section -->
 <section class="testimonials" id="testimonials">
     <div class="container">
@@ -725,5 +963,6 @@ exactly what I&#39;m putting on my face gives me so much confidence. Plus, only 
     </button>
 
     <script src="main.js"></script>
+    <script src="js/shopify-buy-buttons.js"></script>
 </body>
 </html>
