@@ -1,5 +1,5 @@
-# Legs on the Ground - Property Concierge Services
-# Sitemap for legsontheground.com
+# Aura - AI-Powered Skincare
+# Sitemap for Aura.ai
 
 User-agent: *
 Allow: /
@@ -11,7 +11,7 @@ Disallow: /*.json$
 Disallow: /*.log$
 
 # Sitemap location
-Sitemap: https://legsontheground.com/sitemap.xml
+Sitemap: https://zoobiasaifullah.github.io/Aura.ai/sitemap.xml
 
 # Crawl-delay (optional, adjust if needed)
 Crawl-delay: 1
