@@ -39,7 +39,7 @@
 
         ShopifyBuy.UI.onReady(client).then(function(ui) {
             // AI Skin Analysis Button - $20
-            createBuyButton(ui, '9909201338675', 'shopify-buy-button-analysis', {
+            createBuyButton(ui, 'gid://shopify/Product/9909201338675', 'shopify-buy-button-analysis', {
                 product: {
                     buttonDestination: 'checkout',
                     contents: {
@@ -82,7 +82,7 @@
             });
 
             // Personalized Quiz Button - Free first time, then $5/month
-            createBuyButton(ui, '9909201535283', 'shopify-buy-button-quiz', {
+            createBuyButton(ui, 'gid://shopify/Product/9909201535283', 'shopify-buy-button-quiz', {
                 product: {
                     buttonDestination: 'checkout',
                     contents: {
@@ -125,7 +125,7 @@
             });
 
             // Complete Routine Button - $50
-            createBuyButton(ui, '9909201666355', 'shopify-buy-button-routine', {
+            createBuyButton(ui, 'gid://shopify/Product/9909201666355', 'shopify-buy-button-routine', {
                 product: {
                     buttonDestination: 'checkout',
                     contents: {
