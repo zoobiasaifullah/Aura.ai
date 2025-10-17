@@ -10,7 +10,7 @@
             <nav class="nav flex items-center" id="main-nav" aria-label="Main navigation" role="navigation">
                 {% for item in navigation['main_nav'] %}
                 {% if item.id == 'contact' %}
-                <button onclick="document.getElementById('shopify-buy-button-routine').querySelector('button')?.click() || window.location.href='#services'" 
+                <button onclick="var btn = document.getElementById('shopify-buy-button-routine'); if(btn) { var shopifyBtn = btn.querySelector('button'); if(shopifyBtn) shopifyBtn.click(); else window.location.href='#services'; } else window.location.href='#services';" 
                    class="nav-link btn btn-primary"
                    style="border: none; cursor: pointer;">
                    {{ item.title }}
