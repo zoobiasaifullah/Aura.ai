@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopify Buy Button Test</title>
+</head>
+<body>
+    <h1>Testing Shopify Buy Buttons</h1>
+    
+    <h2>AI Skin Analysis ($20)</h2>
+    <div id="product-component-1"></div>
+    
+    <h2>Quiz ($5)</h2>
+    <div id="product-component-2"></div>
+    
+    <h2>Complete Routine ($50)</h2>
+    <div id="product-component-3"></div>
+    
+    <script>
+    (function() {
+        var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+        
+        if (window.ShopifyBuy) {
+            if (window.ShopifyBuy.UI) {
+                ShopifyBuyInit();
+            } else {
+                loadScript();
+            }
+        } else {
+            loadScript();
+        }
+        
+        function loadScript() {
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = scriptURL;
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+            script.onload = ShopifyBuyInit;
+        }
+        
+        function ShopifyBuyInit() {
+            console.log('Initializing Shopify Buy Button...');
+            
+            var client = ShopifyBuy.buildClient({
+                domain: 'aura-aii.myshopify.com',
+                storefrontAccessToken: 'b18dc5f67c379150dae7c51f5ab360ad'
+            });
+            
+            console.log('Client created:', client);
+            
+            ShopifyBuy.UI.onReady(client).then(function(ui) {
+                console.log('UI ready');
+                
+                // Test Product 1
+                ui.createComponent('product', {
+                    id: '9909201338675',
+                    node: document.getElementById('product-component-1'),
+                    moneyFormat: '%24%7B%7Bamount%7D%7D',
+                    options: {
+                        product: {
+                            buttonDestination: 'checkout',
+                            text: {
+                                button: 'Buy Now - AI Analysis'
+                            }
+                        }
+                    }
+                }).then(function() {
+                    console.log('Product 1 loaded successfully');
+                }).catch(function(error) {
+                    console.error('Product 1 error:', error);
+                });
+                
+                // Test Product 2
+                ui.createComponent('product', {
+                    id: '9909201535283',
+                    node: document.getElementById('product-component-2'),
+                    moneyFormat: '%24%7B%7Bamount%7D%7D',
+                    options: {
+                        product: {
+                            buttonDestination: 'checkout',
+                            text: {
+                                button: 'Buy Now - Quiz'
+                            }
+                        }
+                    }
+                }).then(function() {
+                    console.log('Product 2 loaded successfully');
+                }).catch(function(error) {
+                    console.error('Product 2 error:', error);
+                });
+                
+                // Test Product 3
+                ui.createComponent('product', {
+                    id: '9909201666355',
+                    node: document.getElementById('product-component-3'),
+                    moneyFormat: '%24%7B%7Bamount%7D%7D',
+                    options: {
+                        product: {
+                            buttonDestination: 'checkout',
+                            text: {
+                                button: 'Buy Now - Complete Routine'
+                            }
+                        }
+                    }
+                }).then(function() {
+                    console.log('Product 3 loaded successfully');
+                }).catch(function(error) {
+                    console.error('Product 3 error:', error);
+                });
+            }).catch(function(error) {
+                console.error('UI initialization error:', error);
+            });
+        }
+    })();
+    </script>
+</body>
+</html>
