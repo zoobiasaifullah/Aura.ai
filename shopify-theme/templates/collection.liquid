@@ -1,0 +1,68 @@
+<div class="collection-template">
+  <div class="container">
+    <div class="collection-header">
+      <h1 class="collection-title">{{ collection.title }}</h1>
+      {% if collection.description != blank %}
+        <div class="collection-description">{{ collection.description }}</div>
+      {% endif %}
+    </div>
+    
+    <div class="collection-grid">
+      {% for product in collection.products %}
+        <div class="product-card">
+          <a href="{{ product.url }}">
+            <div class="product-card-image">
+              {% if product.featured_image %}
+                <img src="{{ product.featured_image | img_url: '500x500' }}" 
+                     alt="{{ product.title | escape }}"
+                     loading="lazy">
+              {% endif %}
+              
+              {% if product.metafields.custom.recommended_by_ai %}
+                <span class="ai-badge">
+                  <i class="fas fa-robot"></i> AI Recommended
+                </span>
+              {% endif %}
+            </div>
+            
+            <div class="product-card-info">
+              <h3 class="product-card-title">{{ product.title }}</h3>
+              
+              {% if product.metafields.custom.skin_type %}
+                <p class="product-skin-type">For {{ product.metafields.custom.skin_type }} Skin</p>
+              {% endif %}
+              
+              <div class="product-card-price">
+                <span class="price{% if product.compare_at_price > product.price %} sale{% endif %}">
+                  {{ product.price | money }}
+                </span>
+                {% if product.compare_at_price > product.price %}
+                  <span class="compare-price">{{ product.compare_at_price | money }}</span>
+                {% endif %}
+              </div>
+              
+              {% unless product.available %}
+                <span class="sold-out-badge">Sold Out</span>
+              {% endunless %}
+            </div>
+          </a>
+          
+          <form action="{{ routes.cart_add_url }}" method="post" class="quick-add-form">
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+            <button type="submit" 
+                    class="btn btn-secondary btn-quick-add"
+                    {% unless product.available %}disabled{% endunless %}>
+              Quick Add
+            </button>
+          </form>
+        </div>
+      {% endfor %}
+    </div>
+    
+    {% if paginate.pages > 1 %}
+      <div class="pagination">
+        {{ paginate | default_pagination }}
+      </div>
+    {% endif %}
+  </div>
+</div>

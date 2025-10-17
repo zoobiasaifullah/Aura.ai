@@ -1,0 +1,198 @@
+<div class="product-template">
+  <div class="container">
+    <div class="product-grid">
+      <!-- Product Images -->
+      <div class="product-images">
+        <div class="product-image-main">
+          {% if product.featured_image %}
+            <img src="{{ product.featured_image | img_url: '800x800' }}" 
+                 alt="{{ product.featured_image.alt | escape }}"
+                 id="ProductImageMain">
+          {% endif %}
+        </div>
+        
+        {% if product.images.size > 1 %}
+        <div class="product-image-thumbs">
+          {% for image in product.images %}
+            <div class="product-image-thumb {% if forloop.first %}active{% endif %}">
+              <img src="{{ image | img_url: '150x150' }}" 
+                   alt="{{ image.alt | escape }}"
+                   data-image-id="{{ image.id }}">
+            </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      
+      <!-- Product Info -->
+      <div class="product-info">
+        <h1 class="product-title">{{ product.title }}</h1>
+        
+        {% if product.metafields.custom.recommended_by_ai %}
+        <div class="ai-recommendation-badge">
+          <i class="fas fa-robot"></i>
+          <span>AI Recommended for Your Skin Type</span>
+        </div>
+        {% endif %}
+        
+        <div class="product-price">
+          <span class="price{% if product.compare_at_price > product.price %} sale{% endif %}">
+            {{ product.price | money }}
+          </span>
+          {% if product.compare_at_price > product.price %}
+            <span class="compare-price">{{ product.compare_at_price | money }}</span>
+          {% endif %}
+        </div>
+        
+        <div class="product-description">
+          {{ product.description }}
+        </div>
+        
+        {% form 'product', product, id: 'AddToCartForm' %}
+          {% unless product.has_only_default_variant %}
+            <div class="product-variants">
+              {% for option in product.options_with_values %}
+                <div class="product-option">
+                  <label for="Option-{{ option.name | handleize }}">{{ option.name }}</label>
+                  <select name="options[{{ option.name | escape }}]" 
+                          id="Option-{{ option.name | handleize }}"
+                          class="product-select">
+                    {% for value in option.values %}
+                      <option value="{{ value | escape }}"{% if option.selected_value == value %} selected{% endif %}>
+                        {{ value }}
+                      </option>
+                    {% endfor %}
+                  </select>
+                </div>
+              {% endfor %}
+            </div>
+          {% endunless %}
+          
+          <div class="product-quantity">
+            <label for="Quantity">Quantity</label>
+            <input type="number" 
+                   name="quantity" 
+                   id="Quantity" 
+                   value="1" 
+                   min="1"
+                   class="quantity-input">
+          </div>
+          
+          <button type="submit" 
+                  name="add"
+                  class="btn btn-primary btn-add-to-cart"
+                  {% unless product.available %}disabled{% endunless %}>
+            {% if product.available %}
+              <i class="fas fa-shopping-bag"></i> Add to Cart
+            {% else %}
+              Sold Out
+            {% endif %}
+          </button>
+        {% endform %}
+        
+        <!-- Skincare Benefits -->
+        {% if product.metafields.custom.key_ingredients %}
+        <div class="product-ingredients">
+          <h3>Key Ingredients</h3>
+          <div class="ingredients-list">
+            {{ product.metafields.custom.key_ingredients }}
+          </div>
+        </div>
+        {% endif %}
+        
+        <!-- Trust Badges -->
+        <div class="product-trust-badges">
+          <div class="trust-badge">
+            <i class="fas fa-microscope"></i>
+            <span>Dermatologist Tested</span>
+          </div>
+          <div class="trust-badge">
+            <i class="fas fa-leaf"></i>
+            <span>Clean Ingredients</span>
+          </div>
+          <div class="trust-badge">
+            <i class="fas fa-shield-check"></i>
+            <span>Cruelty Free</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Related Products -->
+    {% if product.metafields.custom.routine_products %}
+    <div class="routine-bundle">
+      <h2>Complete Your Routine</h2>
+      <div class="routine-products">
+        {% assign routine_handles = product.metafields.custom.routine_products | split: ',' %}
+        {% for handle in routine_handles %}
+          {% assign routine_product = all_products[handle] %}
+          {% if routine_product %}
+            <div class="routine-product-card">
+              <a href="{{ routine_product.url }}">
+                <img src="{{ routine_product.featured_image | img_url: '300x300' }}" 
+                     alt="{{ routine_product.title }}">
+                <h4>{{ routine_product.title }}</h4>
+                <p class="price">{{ routine_product.price | money }}</p>
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  // Product variant selection
+  document.querySelectorAll('.product-select').forEach(select => {
+    select.addEventListener('change', function() {
+      const form = this.closest('form');
+      const formData = new FormData(form);
+      const selectedOptions = {};
+      
+      formData.forEach((value, key) => {
+        if (key.startsWith('options[')) {
+          const optionName = key.match(/options\[(.*?)\]/)[1];
+          selectedOptions[optionName] = value;
+        }
+      });
+      
+      // Find matching variant
+      const variant = {{ product.variants | json }}.find(v => {
+        return Object.keys(selectedOptions).every((key, index) => {
+          return v[`option${index + 1}`] === selectedOptions[key];
+        });
+      });
+      
+      if (variant) {
+        // Update price
+        document.querySelector('.price').textContent = Shopify.formatMoney(variant.price, theme.moneyFormat);
+        
+        // Update availability
+        const button = form.querySelector('.btn-add-to-cart');
+        if (variant.available) {
+          button.disabled = false;
+          button.innerHTML = '<i class="fas fa-shopping-bag"></i> Add to Cart';
+        } else {
+          button.disabled = true;
+          button.textContent = 'Sold Out';
+        }
+      }
+    });
+  });
+  
+  // Image thumbnails
+  document.querySelectorAll('.product-image-thumb').forEach(thumb => {
+    thumb.addEventListener('click', function() {
+      const imageId = this.querySelector('img').dataset.imageId;
+      const mainImage = document.getElementById('ProductImageMain');
+      const newSrc = this.querySelector('img').src.replace('150x150', '800x800');
+      
+      mainImage.src = newSrc;
+      
+      document.querySelectorAll('.product-image-thumb').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>

@@ -1,0 +1,87 @@
+<section class="faq-section" id="faq" style="background: linear-gradient(180deg, {{ section.settings.gradient_start }} 0%, {{ section.settings.gradient_end }} 100%);">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">{{ section.settings.title }}</h2>
+            {% if section.settings.subtitle != blank %}
+            <p class="section-subtitle">{{ section.settings.subtitle }}</p>
+            {% endif %}
+        </div>
+        
+        <div class="faq-container">
+            {% for block in section.blocks %}
+                <div class="faq-item" {{ block.shopify_attributes }}>
+                    <button class="faq-question flex items-center justify-between" aria-expanded="false">
+                        <span>{{ block.settings.question }}</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        {{ block.settings.answer }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "FAQ Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Section Subtitle"
+    },
+    {
+      "type": "color",
+      "id": "gradient_start",
+      "label": "Background Gradient Start",
+      "default": "#FFF9FB"
+    },
+    {
+      "type": "color",
+      "id": "gradient_end",
+      "label": "Background Gradient End",
+      "default": "#F8F4FB"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Section",
+      "blocks": [
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "How does the AI skin analysis work?",
+            "answer": "<p>Simply upload a clear selfie and our AI analyzes your skin using advanced computer vision and dermatology-backed algorithms.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
