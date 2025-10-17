@@ -48,15 +48,15 @@
                         price: false
                     },
                     text: {
-                        button: 'Get AI Analysis - $20'
+                        button: 'Get AI Analysis'
                     },
                     styles: {
                         button: {
                             'font-family': 'Inter, sans-serif',
-                            'font-size': '16px',
-                            'padding': '16px 32px',
+                            'font-size': '15px',
+                            'padding': '14px 28px',
                             'background': 'linear-gradient(135deg, #D946EF 0%, #A855F7 100%)',
-                            'border-radius': '12px',
+                            'border-radius': '8px',
                             'font-weight': '600',
                             ':hover': {
                                 'background': 'linear-gradient(135deg, #C026D3 0%, #9333EA 100%)'
@@ -81,7 +81,7 @@
                 }
             });
 
-            // Personalized Quiz Button - $10
+            // Personalized Quiz Button - Free first time, then $5/month
             createBuyButton(ui, 'PERSONALIZED_QUIZ_PRODUCT_ID', 'shopify-buy-button-quiz', {
                 product: {
                     buttonDestination: 'checkout',
@@ -91,15 +91,15 @@
                         price: false
                     },
                     text: {
-                        button: 'Take Quiz - $10'
+                        button: 'Start Free Quiz'
                     },
                     styles: {
                         button: {
                             'font-family': 'Inter, sans-serif',
-                            'font-size': '16px',
-                            'padding': '16px 32px',
+                            'font-size': '15px',
+                            'padding': '14px 28px',
                             'background': 'linear-gradient(135deg, #D946EF 0%, #A855F7 100%)',
-                            'border-radius': '12px',
+                            'border-radius': '8px',
                             'font-weight': '600',
                             ':hover': {
                                 'background': 'linear-gradient(135deg, #C026D3 0%, #9333EA 100%)'
@@ -134,18 +134,18 @@
                         price: false
                     },
                     text: {
-                        button: 'Get Complete Routine - $50'
+                        button: 'Get My Routine'
                     },
                     styles: {
                         button: {
                             'font-family': 'Inter, sans-serif',
-                            'font-size': '16px',
-                            'padding': '16px 32px',
-                            'background': 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
-                            'border-radius': '12px',
+                            'font-size': '15px',
+                            'padding': '14px 28px',
+                            'background': 'linear-gradient(135deg, #D946EF 0%, #A855F7 100%)',
+                            'border-radius': '8px',
                             'font-weight': '600',
                             ':hover': {
-                                'background': 'linear-gradient(135deg, #059669 0%, #047857 100%)'
+                                'background': 'linear-gradient(135deg, #C026D3 0%, #9333EA 100%)'
                             }
                         }
                     }
@@ -153,7 +153,7 @@
                 cart: {
                     styles: {
                         button: {
-                            'background': 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+                            'background': 'linear-gradient(135deg, #D946EF 0%, #A855F7 100%)',
                             'border-radius': '12px'
                         }
                     }
@@ -161,7 +161,7 @@
                 toggle: {
                     styles: {
                         toggle: {
-                            'background': 'linear-gradient(135deg, #10B981 0%, #059669 100%)'
+                            'background': 'linear-gradient(135deg, #D946EF 0%, #A855F7 100%)'
                         }
                     }
                 }

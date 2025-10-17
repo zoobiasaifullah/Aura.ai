@@ -6,13 +6,14 @@ services:
     title: "AI Skin Analysis"
     icon: "fa-camera"
     icon_color: "default"
-    price: "Free"
-    price_period: "instant results"
+    price: "$20"
+    price_period: "one-time payment"
     badge: "Most Popular"
     image: "https://images.unsplash.com/photo-1556227834-09f1de7a7d14?w=800&q=80"
     image_alt: "AI-powered skin analysis using advanced facial recognition technology"
-    cta_text: "Try It Now"
-    cta_link: "contact.html"
+    cta_text: "Get AI Analysis"
+    cta_link: "#"
+    shopify_button_id: "shopify-buy-button-analysis"
     order: 1
     description: |
       Upload a selfie and let our advanced AI analyze your skin in seconds. Get accurate 
@@ -28,13 +29,14 @@ services:
     title: "Personalized Smart Quiz"
     icon: "fa-clipboard-list"
     icon_color: "teal"
-    price: "2 minutes"
-    price_period: "to complete"
+    price: "First time free"
+    price_period: "then $5/month"
     badge: null
     image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=800&q=80"
     image_alt: "Interactive quiz interface for personalized skincare recommendations"
-    cta_text: "Start Quiz"
-    cta_link: "contact.html"
+    cta_text: "Start Free Quiz"
+    cta_link: "#"
+    shopify_button_id: "shopify-buy-button-quiz"
     order: 2
     description: |
       Answer a few simple questions about your lifestyle, preferences, and skin goals. 
@@ -50,13 +52,14 @@ services:
     title: "Your Minimalist Routine"
     icon: "fa-spa"
     icon_color: "navy"
-    price: "2-3 Products"
-    price_period: "only essentials"
+    price: "$50"
+    price_period: "complete package"
     badge: null
     image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80"
     image_alt: "Simple 2-3 product minimalist skincare routine customized for individual skin needs"
     cta_text: "Get My Routine"
-    cta_link: "contact.html"
+    cta_link: "#"
+    shopify_button_id: "shopify-buy-button-routine"
     order: 3
     description: |
       No more confusion. Get a personalized routine with just 2–3 essential products 

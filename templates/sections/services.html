@@ -15,13 +15,20 @@
                 </div>
                 <h3 class="service-title">{{ service.title }}</h3>
                 <p class="service-price">{{ service.price }}</p>
+                {% if service.price_period %}
+                <p class="service-price-period">{{ service.price_period }}</p>
+                {% endif %}
                 <p class="service-description">{{ service.description }}</p>
                 <ul class="service-features">
                     {% for feature in service.features %}
                     <li class="flex items-start">{{ feature }}</li>
                     {% endfor %}
                 </ul>
-                <a href="#contact" class="btn btn-outline">Get Started</a>
+                {% if service.shopify_button_id %}
+                <div id="{{ service.shopify_button_id }}" class="shopify-buy-button-container"></div>
+                {% else %}
+                <a href="{{ service.cta_link }}" class="btn btn-outline">{{ service.cta_text }}</a>
+                {% endif %}
             </div>
             {% endfor %}
         </div>

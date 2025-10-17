@@ -9,11 +9,19 @@
             </a>
             <nav class="nav flex items-center" id="main-nav" aria-label="Main navigation" role="navigation">
                 {% for item in navigation['main_nav'] %}
+                {% if item.id == 'contact' %}
+                <button onclick="document.getElementById('shopify-buy-button-routine').querySelector('button')?.click() || window.location.href='#services'" 
+                   class="nav-link btn btn-primary"
+                   style="border: none; cursor: pointer;">
+                   {{ item.title }}
+                </button>
+                {% else %}
                 <a href="{{ item.url }}" 
                    class="nav-link{% if item.id == page.page_id %} active{% endif %}{% if item.highlight %} btn btn-primary{% endif %}"
                    {% if item.id == page.page_id %}aria-current="page"{% endif %}>
                    {{ item.title }}
                 </a>
+                {% endif %}
                 {% endfor %}
             </nav>
             <button class="mobile-menu-toggle" 
