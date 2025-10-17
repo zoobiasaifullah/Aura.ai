@@ -34,12 +34,12 @@
         // Initialize Shopify Buy Button SDK
         var client = ShopifyBuy.buildClient({
             domain: 'aura-aii.myshopify.com', // Your Shopify store domain
-            storefrontAccessToken: 'YOUR_STOREFRONT_ACCESS_TOKEN_HERE' // Get this from Shopify Admin
+            storefrontAccessToken: 'b18dc5f67c379150dae7c51f5ab360ad' // Get this from Shopify Admin
         });
 
         ShopifyBuy.UI.onReady(client).then(function(ui) {
             // AI Skin Analysis Button - $20
-            createBuyButton(ui, 'AI_SKIN_ANALYSIS_PRODUCT_ID', 'shopify-buy-button-analysis', {
+            createBuyButton(ui, '9909201338675', 'shopify-buy-button-analysis', {
                 product: {
                     buttonDestination: 'checkout',
                     contents: {
@@ -82,7 +82,7 @@
             });
 
             // Personalized Quiz Button - Free first time, then $5/month
-            createBuyButton(ui, 'PERSONALIZED_QUIZ_PRODUCT_ID', 'shopify-buy-button-quiz', {
+            createBuyButton(ui, '9909201535283', 'shopify-buy-button-quiz', {
                 product: {
                     buttonDestination: 'checkout',
                     contents: {
@@ -125,7 +125,7 @@
             });
 
             // Complete Routine Button - $50
-            createBuyButton(ui, 'COMPLETE_ROUTINE_PRODUCT_ID', 'shopify-buy-button-routine', {
+            createBuyButton(ui, '9909201666355', 'shopify-buy-button-routine', {
                 product: {
                     buttonDestination: 'checkout',
                     contents: {
